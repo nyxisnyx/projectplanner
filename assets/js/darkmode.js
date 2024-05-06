@@ -22,3 +22,5 @@ let toggleDarkMode = () => {
         taskList.classList.add("dark-theme");
     }
 }
+
+export { toggleDarkMode };

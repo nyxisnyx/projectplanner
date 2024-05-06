@@ -1,6 +1,14 @@
 // app.js
 
 import { addTask } from './taskManager.js';
+import { toggleDarkMode } from './darkmode.js';
+
+//Function to activate dark mode
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+
+darkModeToggle.addEventListener('click', () => {
+    toggleDarkMode();
+});
 
 function init() {
     const addButton = document.getElementById("add-task-btn");
