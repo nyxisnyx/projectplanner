@@ -110,7 +110,7 @@ body #task-description::-moz-placeholder {
 body #task-description::placeholder {
   color: #DBCEA4;
 }
-body #due-date {
+body input[type=date] {
   background-color: #2D4E66;
   border: 2px solid #CBDDE6;
   text-align: center;
@@ -121,4 +121,10 @@ body::-moz-placeholder {
 }
 body::placeholder {
   color: #DBCEA4;
+}
+body #status {
+  background-color: #2D4E66;
+  border: 2px solid #CBDDE6;
+  text-align: center;
+  color: #E8EDEE;
 }/*# sourceMappingURL=style.css.map */

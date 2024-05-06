@@ -134,7 +134,7 @@ body {
         color:$softyellow;
     }
 
-    #due-date {
+    input[type="date"] {
         background-color: $darkblue;
         border:2px solid $greyblue;
         text-align:center;
@@ -143,5 +143,12 @@ body {
 
     &::placeholder {
         color:$softyellow;
+    }
+
+    #status {
+        background-color: $darkblue;
+        border:2px solid $greyblue;
+        text-align:center;
+        color:$grey;
     }
 }
