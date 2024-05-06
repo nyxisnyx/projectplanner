@@ -1,26 +1,38 @@
-let toggleDarkMode = () => {
-    let darkMode = JSON.parse(localStorage.getItem("darkMode"));
+// Function to toggle dark mode on or off
+const toggleDarkMode = () => {
+    // Check if dark mode is currently active
+    const darkModeActive = localStorage.getItem("darkMode") === "true";
 
-    // Items which must change when DM is toggled ON/ OFF
+    // Invert the state of dark mode
+    const newDarkModeState = !darkModeActive;
+
+    // Set the new state of dark mode in localStorage
+    localStorage.setItem("darkMode", newDarkModeState);
+
+    // Update the appearance of the page based on the new state of dark mode
+    updateDarkMode(newDarkModeState);
+}
+
+// Function to update the appearance of the page based on the state of dark mode
+const updateDarkMode = (darkModeActive) => {
+    // If dark mode is active, add the dark-theme class to the body, otherwise remove it
     const body = document.querySelector("body");
-    const container = document.querySelector(".container");
-    const taskForm = document.querySelector("task-form");
-    const taskList = document.querySelector(".task-list"); 
-
-    // Checks if dark theme is active
-    if(!darkMode){
-        //Removes dark theme elements
-        body.classList.remove("dark-theme");
-        container.classList.remove("dark-theme");
-        taskForm.classList.remove("dark-theme");
-        taskList.classList.remove("dark-theme");
-        } else {
-        // Adds dark theme elements
+    if (darkModeActive) {
         body.classList.add("dark-theme");
-        container.classList.add("dark-theme");
-        taskForm.classList.add("dark-theme");
-        taskList.classList.add("dark-theme");
+    } else {
+        body.classList.remove("dark-theme");
     }
 }
+
+// Check if dark mode is active on page load and update appearance accordingly
+document.addEventListener("DOMContentLoaded", () => {
+    const darkModeActive = localStorage.getItem("darkMode") === "true";
+    updateDarkMode(darkModeActive);
+});
+
+// Add event listener to dark mode toggle button
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+darkModeToggle.addEventListener('click', toggleDarkMode);
+
 
 export { toggleDarkMode };

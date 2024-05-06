@@ -1,3 +1,9 @@
+/* Dark mode styles */
+.dark-theme {
+  background-color: #2b2b2b !important;
+  color: #ffffff !important;
+}
+
 /*
   1. Use a more-intuitive box-sizing model.
 */
