@@ -141,11 +141,6 @@ body #status {
 
 /* Dark mode styles */
 .dark-theme {
-  background-color: #2b2b2b;
-  color: #ffffff;
-}
-
-body {
-  background-color: white;
-  color: black;
+  background-color: #9FBED2;
+  color: #292f34;
 }/*# sourceMappingURL=style.css.map */
