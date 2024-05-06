@@ -64,6 +64,7 @@ $midblue:#4D7F9D;
 $lightblue:#9FBED2;
 $greyblue:#CBDDE6;
 $grey:#E8EDEE;
+$charcoal:#292f34;
 
 //1.1 Tasks colors
 $todocolumn: #66312d;
@@ -93,5 +94,54 @@ body {
         font-weight: 100;
         font-size: 2.5rem;
         font-variant: small-caps;
+        line-height:2.8rem;
+    }
+
+    .task-form {
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: space-evenly;
+        width:80%;
+        height:35vh;
+        margin:5%;
+        margin-right:auto;
+        margin-left:auto;
+        border: solid 3px $midblue;
+        background-color: $lightblue;
+        padding:5%;
+    }
+
+    #task-name {
+        background-color: $darkblue;
+        border:2px solid $greyblue;
+        text-align:center;
+        color:$grey;
+    }
+
+    #task-name::placeholder {
+        color:$softyellow;
+    }
+
+    #task-description {
+        background-color: $darkblue;
+        border:2px solid $greyblue;
+        text-align:center;
+        color:$grey;
+    }
+
+    #task-description::placeholder {
+        color:$softyellow;
+    }
+
+    #due-date {
+        background-color: $darkblue;
+        border:2px solid $greyblue;
+        text-align:center;
+        color:$grey;
+    }
+
+    &::placeholder {
+        color:$softyellow;
     }
 }

@@ -70,4 +70,55 @@ body h1 {
   font-weight: 100;
   font-size: 2.5rem;
   font-variant: small-caps;
+  line-height: 2.8rem;
+}
+body .task-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 80%;
+  height: 35vh;
+  margin: 5%;
+  margin-right: auto;
+  margin-left: auto;
+  border: solid 3px #4D7F9D;
+  background-color: #9FBED2;
+  padding: 5%;
+}
+body #task-name {
+  background-color: #2D4E66;
+  border: 2px solid #CBDDE6;
+  text-align: center;
+  color: #E8EDEE;
+}
+body #task-name::-moz-placeholder {
+  color: #DBCEA4;
+}
+body #task-name::placeholder {
+  color: #DBCEA4;
+}
+body #task-description {
+  background-color: #2D4E66;
+  border: 2px solid #CBDDE6;
+  text-align: center;
+  color: #E8EDEE;
+}
+body #task-description::-moz-placeholder {
+  color: #DBCEA4;
+}
+body #task-description::placeholder {
+  color: #DBCEA4;
+}
+body #due-date {
+  background-color: #2D4E66;
+  border: 2px solid #CBDDE6;
+  text-align: center;
+  color: #E8EDEE;
+}
+body::-moz-placeholder {
+  color: #DBCEA4;
+}
+body::placeholder {
+  color: #DBCEA4;
 }/*# sourceMappingURL=style.css.map */
