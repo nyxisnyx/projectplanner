@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet de Gestion des Tâches</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Projet de Gestion des Tâches</h1>
+        <div class="task-form">
+            <input type="text" id="task-name" placeholder="Nom de la tâche">
+            <input type="text" id="task-description" placeholder="Description de la tâche">
+            <input type="date" id="due-date">
+            <select id="status">
+                <option value="todo">todo</option>
+                <option value="doing">doing</option>
+                <option value="done">done</option>
+                <option value="research">research</option>
+            </select>
+            <button id="add-task-btn">Ajouter la tâche</button>
+        </div>
+        <div class="task-list" id="task-list">
+            <!-- Liste des tâches -->
+        </div>
+    </div>
+
+    <script src="taskManager.js" type="module"></script>
+    <script src="app.js" type="module"></script>
+</body>
+</html>
