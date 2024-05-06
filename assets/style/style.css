@@ -1,9 +1,3 @@
-/* Dark mode styles */
-.dark-theme {
-  background-color: #2b2b2b !important;
-  color: #ffffff !important;
-}
-
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -62,4 +56,75 @@ p, h1, h2, h3, h4, h5, h6 {
   src: url("fonts/beauregular-0nlo-webfont.woff2") format("woff2"), url("fonts/beauregular-0nlo-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+}
+body {
+  background-color: #2D4E66;
+}
+body h1 {
+  color: #E8EDEE;
+  text-align: center;
+  margin-top: 2%;
+  -webkit-text-decoration: underline double 0.01rem #9FBED2;
+          text-decoration: underline double 0.01rem #9FBED2;
+  font-family: "beauregular";
+  font-weight: 100;
+  font-size: 2.5rem;
+  font-variant: small-caps;
+  line-height: 2.8rem;
+}
+body .task-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 80%;
+  height: 35vh;
+  margin: 5%;
+  margin-right: auto;
+  margin-left: auto;
+  border: solid 3px #4D7F9D;
+  background-color: #9FBED2;
+  padding: 5%;
+}
+body #task-name {
+  background-color: #2D4E66;
+  border: 2px solid #CBDDE6;
+  text-align: center;
+  color: #E8EDEE;
+}
+body #task-name::-moz-placeholder {
+  color: #DBCEA4;
+}
+body #task-name::placeholder {
+  color: #DBCEA4;
+}
+body #task-description {
+  background-color: #2D4E66;
+  border: 2px solid #CBDDE6;
+  text-align: center;
+  color: #E8EDEE;
+}
+body #task-description::-moz-placeholder {
+  color: #DBCEA4;
+}
+body #task-description::placeholder {
+  color: #DBCEA4;
+}
+body input[type=date] {
+  background-color: #2D4E66;
+  border: 2px solid #CBDDE6;
+  text-align: center;
+  color: #E8EDEE;
+}
+body::-moz-placeholder {
+  color: #DBCEA4;
+}
+body::placeholder {
+  color: #DBCEA4;
+}
+body #status {
+  background-color: #2D4E66;
+  border: 2px solid #CBDDE6;
+  text-align: center;
+  color: #E8EDEE;
 }/*# sourceMappingURL=style.css.map */

@@ -1,6 +1,4 @@
 // app.js
-
-// Importa i moduli necessari
 import { addTask } from './taskManager.js';
 import { toggleDarkMode } from './darkmode.js';
 
