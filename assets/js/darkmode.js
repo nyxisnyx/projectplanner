@@ -34,5 +34,5 @@ document.addEventListener("DOMContentLoaded", () => {
 const darkModeToggle = document.getElementById('dark-mode-toggle');
 darkModeToggle.addEventListener('click', toggleDarkMode);
 
-
+// Export the toggleDarkMode function
 export { toggleDarkMode };
