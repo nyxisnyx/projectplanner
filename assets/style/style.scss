@@ -139,10 +139,29 @@ body {
         border:2px solid $greyblue;
         text-align:center;
         color:$grey;
+        
+        
     }
 
-    &::placeholder {
+    input[type="date"]::-webkit-datetime-edit-month-field {
         color:$softyellow;
+    }
+
+    input[type="date"]::-webkit-datetime-edit-day-field {
+        color:$softyellow;
+    }
+
+    input[type="date"]::-webkit-datetime-edit-year-field {
+        color:$softyellow;
+    }
+
+    input[type="date"]::-webkit-datetime-edit-text {
+        color:$softyellow;
+    }
+
+    input[type="date"]::-webkit-calendar-picker-indicator {
+        color:$softyellow;
+        filter: invert(98%) sepia(5%) saturate(2076%) hue-rotate(335deg) brightness(85%) contrast(103%);
     }
 
     #status {

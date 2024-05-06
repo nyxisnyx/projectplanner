@@ -116,11 +116,21 @@ body input[type=date] {
   text-align: center;
   color: #E8EDEE;
 }
-body::-moz-placeholder {
+body input[type=date]::-webkit-datetime-edit-month-field {
   color: #DBCEA4;
 }
-body::placeholder {
+body input[type=date]::-webkit-datetime-edit-day-field {
   color: #DBCEA4;
+}
+body input[type=date]::-webkit-datetime-edit-year-field {
+  color: #DBCEA4;
+}
+body input[type=date]::-webkit-datetime-edit-text {
+  color: #DBCEA4;
+}
+body input[type=date]::-webkit-calendar-picker-indicator {
+  color: #DBCEA4;
+  filter: invert(98%) sepia(5%) saturate(2076%) hue-rotate(335deg) brightness(85%) contrast(103%);
 }
 body #status {
   background-color: #2D4E66;
