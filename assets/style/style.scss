@@ -283,6 +283,30 @@ body {
         line-height:1.8rem;
       }
     }
+
+    .todo {
+      background-color:$todotask;
+      color:$charcoal;
+      border:3px solid $todocolumn;
+    }
+
+    .doing {
+      background-color:$doingtask;
+      color:$charcoal;
+      border:3px solid $doingcolumn;
+    }
+
+    .done {
+      background-color:$donetask;
+      color:$charcoal;
+      border:3px solid $donecolumn;
+    }
+
+    .research {
+      background-color:$researchtask;
+      color:$charcoal;
+      border:3px solid $researchcolumn;
+    }
   }
 }
 
@@ -290,14 +314,50 @@ body {
 .dark-theme {
   background-color: $lightblue ; 
   color: $charcoal; 
+  
+  header {
+    #dark-mode-toggle {
+      img {
+        filter: invert(23%) sepia(8%) saturate(3452%) hue-rotate(163deg) brightness(97%) contrast(79%);
+      }
+    }
 
-  #dark-mode-toggle {
-    img {
-      filter: invert(23%) sepia(8%) saturate(3452%) hue-rotate(163deg) brightness(97%) contrast(79%);
+    h1 {
+      color:$darkblue;
+      text-decoration: underline double 0.01rem $midblue;
+    }
+  }
+
+  .task-form {
+    border: solid 3px $midblue;
+    background-color: $darkblue;
+
+    #task-name {
+      background-color: $lightblue;
+      border:2px solid $charcoal;
+      color: $charcoal;
+    }
+
+    #task-name::placeholder {
+      color:$darkblue;
     }
   }
 }
+//Responsive
+@media screen and (min-width: 768px) {
+  div.task-form{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 800px;
+    max-height: 150px;
+  }
+  #add-task-btn{ 
+    max-width: 114.17px;
+    max-height: 26px;
+  }
 
+<<<<<<< HEAD
 /* style.css */
 
 .modal-container {
@@ -336,3 +396,13 @@ body {
   margin-top: 10px;
 }
 
+=======
+  div#task-list.task-list{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+>>>>>>> refs/remotes/origin/development
