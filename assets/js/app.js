@@ -20,6 +20,23 @@ function init() {
         clearTaskList();
     });
 
+    document.getElementById("filter-todo-btn").addEventListener("click", () => {
+        filterTasksByStatus("todo");
+    });
+    
+    document.getElementById("filter-doing-btn").addEventListener("click", () => {
+        filterTasksByStatus("doing");
+    });
+    
+    document.getElementById("filter-done-btn").addEventListener("click", () => {
+        filterTasksByStatus("done");
+    });
+    
+    document.getElementById("filter-research-btn").addEventListener("click", () => {
+        filterTasksByStatus("research");
+    });
+    
+
     const addButton = document.getElementById("add-task-btn");
     addButton.addEventListener("click", () => {
         const taskName = document.getElementById("task-name").value;
@@ -63,4 +80,16 @@ function clearTaskList() {
     const taskList = document.getElementById("task-list");
     taskList.innerHTML = ''; // Efface la liste de tâches du DOM
     localStorage.removeItem('tasks'); // Supprime les données de tâches du local storage
+}
+
+function filterTasksByStatus(status) {
+    const taskList = document.getElementById("task-list");
+    taskList.innerHTML = ''; // Efface la liste de tâches actuelle
+
+    let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    tasks = tasks.filter(task => task.status === status);
+
+    tasks.forEach(task => {
+        renderTask(task);
+    });
 }
