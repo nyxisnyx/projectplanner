@@ -321,4 +321,25 @@ body {
     }
   }
 }
+//Responsive
+@media screen and (min-width: 768px) {
+  div.task-form{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 800px;
+    max-height: 150px;
+  }
+  #add-task-btn{ 
+    max-width: 114.17px;
+    max-height: 26px;
+  }
 
+  div#task-list.task-list{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
