@@ -3,10 +3,16 @@ import { addTask } from './taskManager.js';
 import { toggleDarkMode } from './darkmode.js';
 import { renderTask, loadTasks } from './taskManager.js';
 
+
 const darkModeToggle = document.getElementById('dark-mode-toggle');
 darkModeToggle.addEventListener('click', toggleDarkMode);
 
 function init() {
+
+document.addEventListener('DOMContentLoaded', () => {
+    loadTasks();
+});
+
 
     document.getElementById("sort-alpha-btn").addEventListener("click", () => {
         renderSortedTasks('name');
@@ -93,3 +99,5 @@ function filterTasksByStatus(status) {
         renderTask(task);
     });
 }
+
+

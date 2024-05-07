@@ -11,6 +11,7 @@ export function renderTask(task) {
     const taskList = document.getElementById("task-list");
     const taskItem = document.createElement("div");
     taskItem.classList.add("task-item");
+    taskItem.classList.add(task.status);
 
     const dueDate = new Date(task.dueDate);
     const today = new Date();
