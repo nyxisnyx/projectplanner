@@ -283,6 +283,30 @@ body {
         line-height:1.8rem;
       }
     }
+
+    .todo {
+      background-color:$todotask;
+      color:$charcoal;
+      border:3px solid $todocolumn;
+    }
+
+    .doing {
+      background-color:$doingtask;
+      color:$charcoal;
+      border:3px solid $doingcolumn;
+    }
+
+    .done {
+      background-color:$donetask;
+      color:$charcoal;
+      border:3px solid $donecolumn;
+    }
+
+    .research {
+      background-color:$researchtask;
+      color:$charcoal;
+      border:3px solid $researchcolumn;
+    }
   }
 }
 

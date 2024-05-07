@@ -231,6 +231,26 @@ body .task-list .task-item h3 {
   font-variant: small-caps;
   line-height: 1.8rem;
 }
+body .task-list .todo {
+  background-color: #e7a29d;
+  color: #292f34;
+  border: 3px solid #66312d;
+}
+body .task-list .doing {
+  background-color: #9fc6de;
+  color: #292f34;
+  border: 3px solid #2d5066;
+}
+body .task-list .done {
+  background-color: #9fe0ad;
+  color: #292f34;
+  border: 3px solid #2d6639;
+}
+body .task-list .research {
+  background-color: #d2b1ef;
+  color: #292f34;
+  border: 3px solid #4b2d66;
+}
 
 /* Dark mode styles */
 .dark-theme {
