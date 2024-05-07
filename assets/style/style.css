@@ -257,6 +257,26 @@ body .task-list .research {
   background-color: #9FBED2;
   color: #292f34;
 }
-.dark-theme #dark-mode-toggle img {
+.dark-theme header #dark-mode-toggle img {
   filter: invert(23%) sepia(8%) saturate(3452%) hue-rotate(163deg) brightness(97%) contrast(79%);
+}
+.dark-theme header h1 {
+  color: #2D4E66;
+  -webkit-text-decoration: underline double 0.01rem #4D7F9D;
+          text-decoration: underline double 0.01rem #4D7F9D;
+}
+.dark-theme .task-form {
+  border: solid 3px #4D7F9D;
+  background-color: #2D4E66;
+}
+.dark-theme .task-form #task-name {
+  background-color: #9FBED2;
+  border: 2px solid #292f34;
+  color: #292f34;
+}
+.dark-theme .task-form #task-name::-moz-placeholder {
+  color: #2D4E66;
+}
+.dark-theme .task-form #task-name::placeholder {
+  color: #2D4E66;
 }/*# sourceMappingURL=style.css.map */
