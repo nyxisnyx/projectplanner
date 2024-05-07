@@ -195,3 +195,13 @@ body {
   background-color: $lightblue ; 
   color: $charcoal; 
 }
+
+header {
+  display: flex;
+  flex-direction: row;
+}
+
+#due-date {
+  min-width: 126px;
+  min-height: 30px;
+}
