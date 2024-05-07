@@ -60,7 +60,22 @@ p, h1, h2, h3, h4, h5, h6 {
 body {
   background-color: #2D4E66;
 }
-body h1 {
+body header {
+  display: flex;
+  flex-direction: row;
+}
+body header #dark-mode-toggle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+body header #dark-mode-toggle img {
+  width: 24px;
+  height: auto;
+  filter: invert(80%) sepia(21%) saturate(329%) hue-rotate(160deg) brightness(89%) contrast(90%);
+}
+body header h1 {
   color: #E8EDEE;
   text-align: center;
   margin-top: 2%;
@@ -139,20 +154,16 @@ body #status {
   color: #E8EDEE;
 }
 
-#dark-mode-toggle {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-}
-
-#dark-mode-toggle img {
-  width: 24px;
-  height: auto;
-}
-
 /* Dark mode styles */
 .dark-theme {
   background-color: #9FBED2;
   color: #292f34;
+}
+.dark-theme #dark-mode-toggle img {
+  filter: invert(23%) sepia(8%) saturate(3452%) hue-rotate(163deg) brightness(97%) contrast(79%);
+}
+
+#due-date {
+  min-width: 126px;
+  min-height: 30px;
 }/*# sourceMappingURL=style.css.map */

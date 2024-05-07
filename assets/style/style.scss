@@ -89,8 +89,25 @@ $beau: 'beauregular';
 
 body {
     background-color: $darkblue;
-    
-    h1 {
+
+    header {
+      display: flex;
+      flex-direction: row;
+
+      #dark-mode-toggle {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0; 
+      }
+      
+      #dark-mode-toggle img {
+        width: 24px; 
+        height: auto; 
+        filter: invert(80%) sepia(21%) saturate(329%) hue-rotate(160deg) brightness(89%) contrast(90%);
+      }
+
+      h1 {
         color:$grey;
         text-align:center;
         margin-top:2%;
@@ -101,6 +118,9 @@ body {
         font-variant: small-caps;
         line-height:2.8rem;
     }
+    }
+    
+    
 
     .task-form {
         display:flex;
@@ -178,27 +198,18 @@ body {
 }
 
 //Giovanni 
-#dark-mode-toggle {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0; 
-}
 
-#dark-mode-toggle img {
-  width: 24px; 
-  height: auto; 
-}
 
 /* Dark mode styles */
 .dark-theme {
   background-color: $lightblue ; 
   color: $charcoal; 
-}
 
-header {
-  display: flex;
-  flex-direction: row;
+  #dark-mode-toggle {
+    img {
+      filter: invert(23%) sepia(8%) saturate(3452%) hue-rotate(163deg) brightness(97%) contrast(79%);
+    }
+  }
 }
 
 #due-date {
