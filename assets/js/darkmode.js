@@ -2,7 +2,6 @@
 const toggleDarkMode = () => {
     // Check if dark mode is currently active
     const darkModeActive = localStorage.getItem("darkMode") === "true";
-
     // Invert the state of dark mode
     const newDarkModeState = !darkModeActive;
 
@@ -17,10 +16,13 @@ const toggleDarkMode = () => {
 const updateDarkMode = (darkModeActive) => {
     // If dark mode is active, add the dark-theme class to the body, otherwise remove it
     const body = document.querySelector("body");
+    const icon = document.getElementById("icon");
     if (darkModeActive) {
         body.classList.add("dark-theme");
+        icon.src = "assets/img/sun.png";
     } else {
         body.classList.remove("dark-theme");
+        icon.src = "assets/img/moon.png";
     }
 }
 
