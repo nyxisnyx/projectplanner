@@ -9,3 +9,15 @@ body {
     color: black;
 }
   
+
+#dark-mode-toggle {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0; 
+}
+
+#dark-mode-toggle img {
+    width: 24px; 
+    height: auto; 
+}
