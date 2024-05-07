@@ -90,15 +90,18 @@ $beau: 'beauregular';
 body {
     background-color: $darkblue;
 
-    header {
-      display: flex;
-      flex-direction: row;
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
 
       #dark-mode-toggle {
         background-color: transparent;
         border: none;
         cursor: pointer;
         padding: 0; 
+        margin-left: 2%;
       }
       
       #dark-mode-toggle img {
@@ -111,6 +114,7 @@ body {
         color:$grey;
         text-align:center;
         margin-top:2%;
+        margin-left:2%;
         text-decoration: underline double 0.01rem $lightblue;
         font-family: $beau;
         font-weight: 100;
@@ -118,87 +122,95 @@ body {
         font-variant: small-caps;
         line-height:2.8rem;
     }
-    }
+  }
     
-    
-
-    .task-form {
-        display:flex;
-        flex-direction:column;
-        align-items: center;
-        justify-content: space-evenly;
-        width:80%;
-        height:35vh;
-        margin:5%;
-        margin-right:auto;
-        margin-left:auto;
-        border: solid 3px $midblue;
-        background-color: $lightblue;
-        padding:5%;
-    }
+  .task-form {
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-evenly;
+    width:80%;
+    height:35vh;
+    margin:5%;
+    margin-right:auto;
+    margin-left:auto;
+    border: solid 3px $midblue;
+    background-color: $lightblue;
+    padding:5%;
 
     #task-name {
-        background-color: $darkblue;
-        border:2px solid $greyblue;
-        text-align:center;
-        color:$grey;
+      background-color: $darkblue;
+      border:2px solid $greyblue;
+      text-align:center;
+      color:$grey;
     }
 
     #task-name::placeholder {
-        color:$softyellow;
+      color:$softyellow;
     }
 
     #task-description {
-        background-color: $darkblue;
-        border:2px solid $greyblue;
-        text-align:center;
-        color:$grey;
+      background-color: $darkblue;
+      border:2px solid $greyblue;
+      text-align:center;
+      color:$grey;
     }
 
     #task-description::placeholder {
-        color:$softyellow;
+      color:$softyellow;
+    }
+
+    #due-date {
+      min-width: 126px;
+      min-height: 30px;
     }
 
     input[type="date"] {
-        background-color: $darkblue;
-        border:2px solid $greyblue;
-        text-align:center;
-        color:$grey;
-        
-        
+      background-color: $darkblue;
+      border:2px solid $greyblue;
+      text-align:center;
+      color:$grey;
     }
 
     input[type="date"]::-webkit-datetime-edit-month-field {
-        color:$softyellow;
+      color:$softyellow;
     }
 
     input[type="date"]::-webkit-datetime-edit-day-field {
-        color:$softyellow;
+      color:$softyellow;
     }
 
     input[type="date"]::-webkit-datetime-edit-year-field {
-        color:$softyellow;
+      color:$softyellow;
     }
 
     input[type="date"]::-webkit-datetime-edit-text {
-        color:$softyellow;
+      color:$softyellow;
     }
 
     input[type="date"]::-webkit-calendar-picker-indicator {
-        color:$softyellow;
-        filter: invert(98%) sepia(5%) saturate(2076%) hue-rotate(335deg) brightness(85%) contrast(103%);
+      color:$softyellow;
+      filter: invert(98%) sepia(5%) saturate(2076%) hue-rotate(335deg) brightness(85%) contrast(103%);
     }
 
     #status {
-        background-color: $darkblue;
-        border:2px solid $greyblue;
-        text-align:center;
-        color:$grey;
+      background-color: $darkblue;
+      border:2px solid $greyblue;
+      text-align:center;
+      color:$grey;
     }
+
+    #add-task-btn {
+      background-color: $darkblue;
+      color:$lightblue;
+      border:none;
+    }
+
+    #add-task-btn:hover {
+      color:$grey !important;
+    }
+  }
 }
-
-//Giovanni 
-
 
 /* Dark mode styles */
 .dark-theme {
@@ -212,7 +224,3 @@ body {
   }
 }
 
-#due-date {
-  min-width: 126px;
-  min-height: 30px;
-}

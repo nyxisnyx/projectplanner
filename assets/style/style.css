@@ -63,12 +63,15 @@ body {
 body header {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
 }
 body header #dark-mode-toggle {
   background-color: transparent;
   border: none;
   cursor: pointer;
   padding: 0;
+  margin-left: 2%;
 }
 body header #dark-mode-toggle img {
   width: 24px;
@@ -79,6 +82,7 @@ body header h1 {
   color: #E8EDEE;
   text-align: center;
   margin-top: 2%;
+  margin-left: 2%;
   -webkit-text-decoration: underline double 0.01rem #9FBED2;
           text-decoration: underline double 0.01rem #9FBED2;
   font-family: "beauregular";
@@ -101,57 +105,69 @@ body .task-form {
   background-color: #9FBED2;
   padding: 5%;
 }
-body #task-name {
+body .task-form #task-name {
   background-color: #2D4E66;
   border: 2px solid #CBDDE6;
   text-align: center;
   color: #E8EDEE;
 }
-body #task-name::-moz-placeholder {
+body .task-form #task-name::-moz-placeholder {
   color: #DBCEA4;
 }
-body #task-name::placeholder {
+body .task-form #task-name::placeholder {
   color: #DBCEA4;
 }
-body #task-description {
+body .task-form #task-description {
   background-color: #2D4E66;
   border: 2px solid #CBDDE6;
   text-align: center;
   color: #E8EDEE;
 }
-body #task-description::-moz-placeholder {
+body .task-form #task-description::-moz-placeholder {
   color: #DBCEA4;
 }
-body #task-description::placeholder {
+body .task-form #task-description::placeholder {
   color: #DBCEA4;
 }
-body input[type=date] {
+body .task-form #due-date {
+  min-width: 126px;
+  min-height: 30px;
+}
+body .task-form input[type=date] {
   background-color: #2D4E66;
   border: 2px solid #CBDDE6;
   text-align: center;
   color: #E8EDEE;
 }
-body input[type=date]::-webkit-datetime-edit-month-field {
+body .task-form input[type=date]::-webkit-datetime-edit-month-field {
   color: #DBCEA4;
 }
-body input[type=date]::-webkit-datetime-edit-day-field {
+body .task-form input[type=date]::-webkit-datetime-edit-day-field {
   color: #DBCEA4;
 }
-body input[type=date]::-webkit-datetime-edit-year-field {
+body .task-form input[type=date]::-webkit-datetime-edit-year-field {
   color: #DBCEA4;
 }
-body input[type=date]::-webkit-datetime-edit-text {
+body .task-form input[type=date]::-webkit-datetime-edit-text {
   color: #DBCEA4;
 }
-body input[type=date]::-webkit-calendar-picker-indicator {
+body .task-form input[type=date]::-webkit-calendar-picker-indicator {
   color: #DBCEA4;
   filter: invert(98%) sepia(5%) saturate(2076%) hue-rotate(335deg) brightness(85%) contrast(103%);
 }
-body #status {
+body .task-form #status {
   background-color: #2D4E66;
   border: 2px solid #CBDDE6;
   text-align: center;
   color: #E8EDEE;
+}
+body .task-form #add-task-btn {
+  background-color: #2D4E66;
+  color: #9FBED2;
+  border: none;
+}
+body .task-form #add-task-btn:hover {
+  color: #E8EDEE !important;
 }
 
 /* Dark mode styles */
@@ -161,9 +177,4 @@ body #status {
 }
 .dark-theme #dark-mode-toggle img {
   filter: invert(23%) sepia(8%) saturate(3452%) hue-rotate(163deg) brightness(97%) contrast(79%);
-}
-
-#due-date {
-  min-width: 126px;
-  min-height: 30px;
 }/*# sourceMappingURL=style.css.map */
