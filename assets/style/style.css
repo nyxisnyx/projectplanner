@@ -169,6 +169,68 @@ body .task-form #add-task-btn {
 body .task-form #add-task-btn:hover {
   color: #E8EDEE !important;
 }
+body #sort {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2%;
+}
+body #sort button {
+  margin: 1%;
+  background-color: #9FBED2;
+  color: #292f34;
+  border: none;
+}
+body #filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2%;
+}
+body #filters button {
+  margin: 1%;
+}
+body #filters #filter-todo-btn {
+  background-color: #e7a29d;
+  color: #292f34;
+  border: 3px solid #66312d;
+}
+body #filters #filter-doing-btn {
+  background-color: #9fc6de;
+  color: #292f34;
+  border: 3px solid #2d5066;
+}
+body #filters #filter-done-btn {
+  background-color: #9fe0ad;
+  color: #292f34;
+  border: 3px solid #2d6639;
+}
+body #filters #filter-research-btn {
+  background-color: #d2b1ef;
+  color: #292f34;
+  border: 3px solid #4b2d66;
+}
+body .task-list .task-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 80%;
+  height: 35vh;
+  margin: 5%;
+  margin-right: auto;
+  margin-left: auto;
+  border: solid 3px #4D7F9D;
+  background-color: #9FBED2;
+  padding: 5%;
+}
+body .task-list .task-item h3 {
+  text-align: center;
+  font-family: "beauregular";
+  font-weight: 100;
+  font-size: 1.5rem;
+  font-variant: small-caps;
+  line-height: 1.8rem;
+}
 
 /* Dark mode styles */
 .dark-theme {

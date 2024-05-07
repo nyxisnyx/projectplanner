@@ -210,6 +210,80 @@ body {
       color:$grey !important;
     }
   }
+
+  #sort {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    margin-bottom:2%;
+
+    button {
+      margin:1%;
+      background-color: $lightblue;
+      color:$charcoal;
+      border:none;
+    }
+  }
+
+  #filters {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    margin-bottom:2%;
+
+    button {
+      margin:1%;
+    }
+
+    #filter-todo-btn {
+      background-color:$todotask;
+      color:$charcoal;
+      border:3px solid $todocolumn;
+    }
+
+    #filter-doing-btn {
+      background-color:$doingtask;
+      color:$charcoal;
+      border:3px solid $doingcolumn;
+    }
+
+    #filter-done-btn {
+      background-color:$donetask;
+      color:$charcoal;
+      border:3px solid $donecolumn;
+    }
+
+    #filter-research-btn {
+      background-color:$researchtask;
+      color:$charcoal;
+      border:3px solid $researchcolumn;
+    }
+  }
+
+  .task-list {
+    .task-item {
+      display:flex;
+      flex-direction:column;
+      justify-content: space-evenly;
+      width:80%;
+      height:35vh;
+      margin:5%;
+      margin-right:auto;
+      margin-left:auto;
+      border: solid 3px $midblue;
+      background-color: $lightblue;
+      padding:5%;
+
+      h3 {
+        text-align:center;
+        font-family: $beau;
+        font-weight: 100;
+        font-size: 1.5rem;
+        font-variant: small-caps;
+        line-height:1.8rem;
+      }
+    }
+  }
 }
 
 /* Dark mode styles */
