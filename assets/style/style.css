@@ -60,10 +60,29 @@ p, h1, h2, h3, h4, h5, h6 {
 body {
   background-color: #2D4E66;
 }
-body h1 {
+body header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+}
+body header #dark-mode-toggle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 2%;
+}
+body header #dark-mode-toggle img {
+  width: 24px;
+  height: auto;
+  filter: invert(80%) sepia(21%) saturate(329%) hue-rotate(160deg) brightness(89%) contrast(90%);
+}
+body header h1 {
   color: #E8EDEE;
   text-align: center;
   margin-top: 2%;
+  margin-left: 2%;
   -webkit-text-decoration: underline double 0.01rem #9FBED2;
           text-decoration: underline double 0.01rem #9FBED2;
   font-family: "beauregular";
@@ -86,88 +105,138 @@ body .task-form {
   background-color: #9FBED2;
   padding: 5%;
 }
-body #task-name {
+body .task-form #task-name {
   background-color: #2D4E66;
   border: 2px solid #CBDDE6;
   text-align: center;
   color: #E8EDEE;
 }
-body #task-name::-moz-placeholder {
+body .task-form #task-name::-moz-placeholder {
   color: #DBCEA4;
 }
-body #task-name::placeholder {
+body .task-form #task-name::placeholder {
   color: #DBCEA4;
 }
-body #task-description {
+body .task-form #task-description {
   background-color: #2D4E66;
   border: 2px solid #CBDDE6;
   text-align: center;
   color: #E8EDEE;
 }
-body #task-description::-moz-placeholder {
+body .task-form #task-description::-moz-placeholder {
   color: #DBCEA4;
 }
-body #task-description::placeholder {
+body .task-form #task-description::placeholder {
   color: #DBCEA4;
 }
-body input[type=date] {
+body .task-form #due-date {
+  min-width: 126px;
+  min-height: 30px;
+}
+body .task-form input[type=date] {
   background-color: #2D4E66;
   border: 2px solid #CBDDE6;
   text-align: center;
   color: #E8EDEE;
 }
-body input[type=date]::-webkit-datetime-edit-month-field {
+body .task-form input[type=date]::-webkit-datetime-edit-month-field {
   color: #DBCEA4;
 }
-body input[type=date]::-webkit-datetime-edit-day-field {
+body .task-form input[type=date]::-webkit-datetime-edit-day-field {
   color: #DBCEA4;
 }
-body input[type=date]::-webkit-datetime-edit-year-field {
+body .task-form input[type=date]::-webkit-datetime-edit-year-field {
   color: #DBCEA4;
 }
-body input[type=date]::-webkit-datetime-edit-text {
+body .task-form input[type=date]::-webkit-datetime-edit-text {
   color: #DBCEA4;
 }
-body input[type=date]::-webkit-calendar-picker-indicator {
+body .task-form input[type=date]::-webkit-calendar-picker-indicator {
   color: #DBCEA4;
   filter: invert(98%) sepia(5%) saturate(2076%) hue-rotate(335deg) brightness(85%) contrast(103%);
 }
-body #status {
+body .task-form #status {
   background-color: #2D4E66;
   border: 2px solid #CBDDE6;
   text-align: center;
   color: #E8EDEE;
 }
-
-#dark-mode-toggle {
-  background-color: transparent;
+body .task-form #add-task-btn {
+  background-color: #2D4E66;
+  color: #9FBED2;
   border: none;
-  cursor: pointer;
-  padding: 0;
 }
-
-#dark-mode-toggle img {
-  width: 24px;
-  height: auto;
+body .task-form #add-task-btn:hover {
+  color: #E8EDEE !important;
+}
+body #sort {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2%;
+}
+body #sort button {
+  margin: 1%;
+  background-color: #9FBED2;
+  color: #292f34;
+  border: none;
+}
+body #filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2%;
+}
+body #filters button {
+  margin: 1%;
+}
+body #filters #filter-todo-btn {
+  background-color: #e7a29d;
+  color: #292f34;
+  border: 3px solid #66312d;
+}
+body #filters #filter-doing-btn {
+  background-color: #9fc6de;
+  color: #292f34;
+  border: 3px solid #2d5066;
+}
+body #filters #filter-done-btn {
+  background-color: #9fe0ad;
+  color: #292f34;
+  border: 3px solid #2d6639;
+}
+body #filters #filter-research-btn {
+  background-color: #d2b1ef;
+  color: #292f34;
+  border: 3px solid #4b2d66;
+}
+body .task-list .task-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 80%;
+  height: 35vh;
+  margin: 5%;
+  margin-right: auto;
+  margin-left: auto;
+  border: solid 3px #4D7F9D;
+  background-color: #9FBED2;
+  padding: 5%;
+}
+body .task-list .task-item h3 {
+  text-align: center;
+  font-family: "beauregular";
+  font-weight: 100;
+  font-size: 1.5rem;
+  font-variant: small-caps;
+  line-height: 1.8rem;
 }
 
 /* Dark mode styles */
 .dark-theme {
-  background-color: #2b2b2b;
-  color: #ffffff;
+  background-color: #9FBED2;
+  color: #292f34;
 }
-
-body {
-  background-color: white;
-  color: black;
-}
-
-header {
-  display: flex;
-  flex-direction: row;
-}
-
-#due-date {
-  min-width: 126px;
-  min-height: 30px;
+.dark-theme #dark-mode-toggle img {
+  filter: invert(23%) sepia(8%) saturate(3452%) hue-rotate(163deg) brightness(97%) contrast(79%);
 }/*# sourceMappingURL=style.css.map */

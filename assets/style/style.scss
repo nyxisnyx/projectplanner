@@ -89,11 +89,32 @@ $beau: 'beauregular';
 
 body {
     background-color: $darkblue;
-    
-    h1 {
+
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+
+      #dark-mode-toggle {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0; 
+        margin-left: 2%;
+      }
+      
+      #dark-mode-toggle img {
+        width: 24px; 
+        height: auto; 
+        filter: invert(80%) sepia(21%) saturate(329%) hue-rotate(160deg) brightness(89%) contrast(90%);
+      }
+
+      h1 {
         color:$grey;
         text-align:center;
         margin-top:2%;
+        margin-left:2%;
         text-decoration: underline double 0.01rem $lightblue;
         font-family: $beau;
         font-weight: 100;
@@ -101,112 +122,179 @@ body {
         font-variant: small-caps;
         line-height:2.8rem;
     }
-
-    .task-form {
-        display:flex;
-        flex-direction:column;
-        align-items: center;
-        justify-content: space-evenly;
-        width:80%;
-        height:35vh;
-        margin:5%;
-        margin-right:auto;
-        margin-left:auto;
-        border: solid 3px $midblue;
-        background-color: $lightblue;
-        padding:5%;
-    }
+  }
+    
+  .task-form {
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-evenly;
+    width:80%;
+    height:35vh;
+    margin:5%;
+    margin-right:auto;
+    margin-left:auto;
+    border: solid 3px $midblue;
+    background-color: $lightblue;
+    padding:5%;
 
     #task-name {
-        background-color: $darkblue;
-        border:2px solid $greyblue;
-        text-align:center;
-        color:$grey;
+      background-color: $darkblue;
+      border:2px solid $greyblue;
+      text-align:center;
+      color:$grey;
     }
 
     #task-name::placeholder {
-        color:$softyellow;
+      color:$softyellow;
     }
 
     #task-description {
-        background-color: $darkblue;
-        border:2px solid $greyblue;
-        text-align:center;
-        color:$grey;
+      background-color: $darkblue;
+      border:2px solid $greyblue;
+      text-align:center;
+      color:$grey;
     }
 
     #task-description::placeholder {
-        color:$softyellow;
+      color:$softyellow;
+    }
+
+    #due-date {
+      min-width: 126px;
+      min-height: 30px;
     }
 
     input[type="date"] {
-        background-color: $darkblue;
-        border:2px solid $greyblue;
-        text-align:center;
-        color:$grey;
-        
-        
+      background-color: $darkblue;
+      border:2px solid $greyblue;
+      text-align:center;
+      color:$grey;
     }
 
     input[type="date"]::-webkit-datetime-edit-month-field {
-        color:$softyellow;
+      color:$softyellow;
     }
 
     input[type="date"]::-webkit-datetime-edit-day-field {
-        color:$softyellow;
+      color:$softyellow;
     }
 
     input[type="date"]::-webkit-datetime-edit-year-field {
-        color:$softyellow;
+      color:$softyellow;
     }
 
     input[type="date"]::-webkit-datetime-edit-text {
-        color:$softyellow;
+      color:$softyellow;
     }
 
     input[type="date"]::-webkit-calendar-picker-indicator {
-        color:$softyellow;
-        filter: invert(98%) sepia(5%) saturate(2076%) hue-rotate(335deg) brightness(85%) contrast(103%);
+      color:$softyellow;
+      filter: invert(98%) sepia(5%) saturate(2076%) hue-rotate(335deg) brightness(85%) contrast(103%);
     }
 
     #status {
-        background-color: $darkblue;
-        border:2px solid $greyblue;
-        text-align:center;
-        color:$grey;
+      background-color: $darkblue;
+      border:2px solid $greyblue;
+      text-align:center;
+      color:$grey;
     }
-}
 
-//Giovanni 
-#dark-mode-toggle {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0; 
-}
+    #add-task-btn {
+      background-color: $darkblue;
+      color:$lightblue;
+      border:none;
+    }
 
-#dark-mode-toggle img {
-  width: 24px; 
-  height: auto; 
+    #add-task-btn:hover {
+      color:$grey !important;
+    }
+  }
+
+  #sort {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    margin-bottom:2%;
+
+    button {
+      margin:1%;
+      background-color: $lightblue;
+      color:$charcoal;
+      border:none;
+    }
+  }
+
+  #filters {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    margin-bottom:2%;
+
+    button {
+      margin:1%;
+    }
+
+    #filter-todo-btn {
+      background-color:$todotask;
+      color:$charcoal;
+      border:3px solid $todocolumn;
+    }
+
+    #filter-doing-btn {
+      background-color:$doingtask;
+      color:$charcoal;
+      border:3px solid $doingcolumn;
+    }
+
+    #filter-done-btn {
+      background-color:$donetask;
+      color:$charcoal;
+      border:3px solid $donecolumn;
+    }
+
+    #filter-research-btn {
+      background-color:$researchtask;
+      color:$charcoal;
+      border:3px solid $researchcolumn;
+    }
+  }
+
+  .task-list {
+    .task-item {
+      display:flex;
+      flex-direction:column;
+      justify-content: space-evenly;
+      width:80%;
+      height:35vh;
+      margin:5%;
+      margin-right:auto;
+      margin-left:auto;
+      border: solid 3px $midblue;
+      background-color: $lightblue;
+      padding:5%;
+
+      h3 {
+        text-align:center;
+        font-family: $beau;
+        font-weight: 100;
+        font-size: 1.5rem;
+        font-variant: small-caps;
+        line-height:1.8rem;
+      }
+    }
+  }
 }
 
 /* Dark mode styles */
 .dark-theme {
-  background-color: #2b2b2b ; 
-  color: #ffffff; 
+  background-color: $lightblue ; 
+  color: $charcoal; 
+
+  #dark-mode-toggle {
+    img {
+      filter: invert(23%) sepia(8%) saturate(3452%) hue-rotate(163deg) brightness(97%) contrast(79%);
+    }
+  }
 }
 
-body {
-  background-color: white;
-  color: black;
-}
-
-header {
-  display: flex;
-  flex-direction: row;
-}
-
-#due-date {
-  min-width: 126px;
-  min-height: 30px;
-}
