@@ -314,10 +314,32 @@ body {
 .dark-theme {
   background-color: $lightblue ; 
   color: $charcoal; 
+  
+  header {
+    #dark-mode-toggle {
+      img {
+        filter: invert(23%) sepia(8%) saturate(3452%) hue-rotate(163deg) brightness(97%) contrast(79%);
+      }
+    }
 
-  #dark-mode-toggle {
-    img {
-      filter: invert(23%) sepia(8%) saturate(3452%) hue-rotate(163deg) brightness(97%) contrast(79%);
+    h1 {
+      color:$darkblue;
+      text-decoration: underline double 0.01rem $midblue;
+    }
+  }
+
+  .task-form {
+    border: solid 3px $midblue;
+    background-color: $darkblue;
+
+    #task-name {
+      background-color: $lightblue;
+      border:2px solid $charcoal;
+      color: $charcoal;
+    }
+
+    #task-name::placeholder {
+      color:$darkblue;
     }
   }
 }
