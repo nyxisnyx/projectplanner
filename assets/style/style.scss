@@ -457,14 +457,9 @@ body {
 }
 
 footer{
-  display: flex;
+  display:flex ;
   flex-direction: row;
-
-.git-icons{
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-}
+  justify-content: center;
 }
 
 .git{
@@ -474,6 +469,14 @@ footer{
 .contributors{
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  margin-left: 5px;
+}
+
+.contacts {
+  margin-top: auto;
+  width: 100%;
   justify-content: space-between;
 }
 //Responsive
