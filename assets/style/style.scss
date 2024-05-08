@@ -390,6 +390,70 @@ body {
       color:$darkblue;
     }
   }
+
+  #sort {
+    button {
+      background-color: $darkblue;
+      color:$lightblue;
+    }
+  }
+
+  #filters {
+    #filter-todo-btn {
+      background-color:$todocolumn;
+      color:$todotask;
+      border:3px solid $todotask;
+    }
+
+    #filter-doing-btn {
+      background-color:$doingcolumn;
+      color:$doingtask;
+      border:3px solid $doingtask;
+    }
+
+    #filter-done-btn {
+      background-color:$donecolumn;
+      color:$donetask;
+      border:3px solid $donetask;
+    }
+
+    #filter-research-btn {
+      background-color:$researchcolumn;
+      color:$researchtask;
+      border:3px solid $researchtask;
+    }
+  }
+
+  .task-list {
+    .task-item {
+      border: solid 3px $midblue;
+      background-color: $darkblue;
+    }
+
+    .todo {
+      background-color:$todocolumn;
+      color:$grey;
+      border:3px solid $todotask;
+    }
+
+    .doing {
+      background-color:$doingcolumn;
+      color:$grey;
+      border:3px solid $doingtask;
+    }
+
+    .done {
+      background-color:$donecolumn;
+      color:$grey;
+      border:3px solid $donetask;
+    }
+
+    .research {
+      background-color:$researchcolumn;
+      color:$grey;
+      border:3px solid $researchtask;
+    }
+  }
 }
 
 

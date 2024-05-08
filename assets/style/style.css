@@ -321,6 +321,54 @@ body .task-list .research {
   background-color: #9FBED2;
   color: #2D4E66;
 }
+.dark-theme #sort button {
+  background-color: #2D4E66;
+  color: #9FBED2;
+}
+.dark-theme #filters #filter-todo-btn {
+  background-color: #66312d;
+  color: #e7a29d;
+  border: 3px solid #e7a29d;
+}
+.dark-theme #filters #filter-doing-btn {
+  background-color: #2d5066;
+  color: #9fc6de;
+  border: 3px solid #9fc6de;
+}
+.dark-theme #filters #filter-done-btn {
+  background-color: #2d6639;
+  color: #9fe0ad;
+  border: 3px solid #9fe0ad;
+}
+.dark-theme #filters #filter-research-btn {
+  background-color: #4b2d66;
+  color: #d2b1ef;
+  border: 3px solid #d2b1ef;
+}
+.dark-theme .task-list .task-item {
+  border: solid 3px #4D7F9D;
+  background-color: #2D4E66;
+}
+.dark-theme .task-list .todo {
+  background-color: #66312d;
+  color: #E8EDEE;
+  border: 3px solid #e7a29d;
+}
+.dark-theme .task-list .doing {
+  background-color: #2d5066;
+  color: #E8EDEE;
+  border: 3px solid #9fc6de;
+}
+.dark-theme .task-list .done {
+  background-color: #2d6639;
+  color: #E8EDEE;
+  border: 3px solid #9fe0ad;
+}
+.dark-theme .task-list .research {
+  background-color: #4b2d66;
+  color: #E8EDEE;
+  border: 3px solid #d2b1ef;
+}
 
 @media screen and (min-width: 768px) {
   div.task-form {
