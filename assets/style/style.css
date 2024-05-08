@@ -260,7 +260,47 @@ body .task-list .research {
 .dark-theme header #dark-mode-toggle img {
   filter: invert(23%) sepia(8%) saturate(3452%) hue-rotate(163deg) brightness(97%) contrast(79%);
 }
-<<<<<<< HEAD
+.dark-theme header h1 {
+  color: #2D4E66;
+  -webkit-text-decoration: underline double 0.01rem #4D7F9D;
+          text-decoration: underline double 0.01rem #4D7F9D;
+}
+.dark-theme .task-form {
+  border: solid 3px #4D7F9D;
+  background-color: #2D4E66;
+}
+.dark-theme .task-form #task-name {
+  background-color: #9FBED2;
+  border: 2px solid #292f34;
+  color: #292f34;
+}
+.dark-theme .task-form #task-name::-moz-placeholder {
+  color: #2D4E66;
+}
+.dark-theme .task-form #task-name::placeholder {
+  color: #2D4E66;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+}
+footer .git-icons {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.git {
+  max-width: 30px;
+  max-height: 30px;
+}
+
+.contributors {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
 @media screen and (min-width: 768px) {
   div.task-form {
@@ -281,25 +321,4 @@ body .task-list .research {
     margin-right: 10px;
     margin-left: 10px;
   }
-=======
-.dark-theme header h1 {
-  color: #2D4E66;
-  -webkit-text-decoration: underline double 0.01rem #4D7F9D;
-          text-decoration: underline double 0.01rem #4D7F9D;
-}
-.dark-theme .task-form {
-  border: solid 3px #4D7F9D;
-  background-color: #2D4E66;
-}
-.dark-theme .task-form #task-name {
-  background-color: #9FBED2;
-  border: 2px solid #292f34;
-  color: #292f34;
-}
-.dark-theme .task-form #task-name::-moz-placeholder {
-  color: #2D4E66;
-}
-.dark-theme .task-form #task-name::placeholder {
-  color: #2D4E66;
->>>>>>> c903bd7505f9893e9825004cde0e4a618aab4dbd
 }/*# sourceMappingURL=style.css.map */

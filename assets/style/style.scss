@@ -343,6 +343,27 @@ body {
     }
   }
 }
+
+footer{
+  display: flex;
+  flex-direction: row;
+
+.git-icons{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+}
+
+.git{
+  max-width: 30px;
+  max-height: 30px;
+}
+.contributors{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 //Responsive
 @media screen and (min-width: 768px) {
   div.task-form{
