@@ -323,126 +323,121 @@ body .contacts {
   background-color: #9FBED2;
   color: #292f34;
 }
-
-header #dark-mode-toggle img {
+.dark-theme header #dark-mode-toggle img {
   filter: invert(23%) sepia(8%) saturate(3452%) hue-rotate(163deg) brightness(97%) contrast(79%);
 }
-header h1 {
+.dark-theme header h1 {
   color: #2D4E66;
   -webkit-text-decoration: underline double 0.01rem #4D7F9D;
           text-decoration: underline double 0.01rem #4D7F9D;
 }
-
-.task-form {
+.dark-theme .task-form {
   border: solid 3px #4D7F9D;
   background-color: #2D4E66;
 }
-.task-form #task-name {
+.dark-theme .task-form #task-name {
   background-color: #9FBED2;
   border: 2px solid #292f34;
   color: #292f34;
 }
-.task-form #task-name::-moz-placeholder {
+.dark-theme .task-form #task-name::-moz-placeholder {
   color: #2D4E66;
 }
-.task-form #task-name::placeholder {
+.dark-theme .task-form #task-name::placeholder {
   color: #2D4E66;
 }
-.task-form #task-description {
+.dark-theme .task-form #task-description {
   background-color: #9FBED2;
   border: 2px solid #292f34;
   color: #292f34;
 }
-.task-form #task-description::-moz-placeholder {
+.dark-theme .task-form #task-description::-moz-placeholder {
   color: #2D4E66;
 }
-.task-form #task-description::placeholder {
+.dark-theme .task-form #task-description::placeholder {
   color: #2D4E66;
 }
-.task-form input[type=date] {
+.dark-theme .task-form input[type=date] {
   background-color: #9FBED2;
   border: 2px solid #292f34;
   text-align: center;
   color: #292f34;
 }
-.task-form input[type=date]::-webkit-datetime-edit-month-field {
+.dark-theme .task-form input[type=date]::-webkit-datetime-edit-month-field {
   color: #2D4E66;
 }
-.task-form input[type=date]::-webkit-datetime-edit-day-field {
+.dark-theme .task-form input[type=date]::-webkit-datetime-edit-day-field {
   color: #2D4E66;
 }
-.task-form input[type=date]::-webkit-datetime-edit-year-field {
+.dark-theme .task-form input[type=date]::-webkit-datetime-edit-year-field {
   color: #2D4E66;
 }
-.task-form input[type=date]::-webkit-datetime-edit-text {
+.dark-theme .task-form input[type=date]::-webkit-datetime-edit-text {
   color: #2D4E66;
 }
-.task-form input[type=date]::-webkit-calendar-picker-indicator {
+.dark-theme .task-form input[type=date]::-webkit-calendar-picker-indicator {
   color: #2D4E66;
   filter: invert(26%) sepia(12%) saturate(1832%) hue-rotate(163deg) brightness(96%) contrast(89%);
 }
-.task-form #status {
+.dark-theme .task-form #status {
   background-color: #9FBED2;
   border: 2px solid #292f34;
   color: #292f34;
 }
-.task-form #add-task-btn {
+.dark-theme .task-form #add-task-btn {
   background-color: #9FBED2;
   color: #2D4E66;
 }
-
-#sort button {
+.dark-theme #sort button {
   background-color: #2D4E66;
   color: #9FBED2;
 }
-
-#filters #filter-todo-btn {
+.dark-theme #filters #filter-todo-btn {
   background-color: #66312d;
   color: #e7a29d;
   border: 3px solid #e7a29d;
 }
-#filters #filter-doing-btn {
+.dark-theme #filters #filter-doing-btn {
   background-color: #2d5066;
   color: #9fc6de;
   border: 3px solid #9fc6de;
 }
-#filters #filter-done-btn {
+.dark-theme #filters #filter-done-btn {
   background-color: #2d6639;
   color: #9fe0ad;
   border: 3px solid #9fe0ad;
 }
-#filters #filter-research-btn {
+.dark-theme #filters #filter-research-btn {
   background-color: #4b2d66;
   color: #d2b1ef;
   border: 3px solid #d2b1ef;
 }
-
-.task-list .task-item {
+.dark-theme .task-list .task-item {
   border: solid 3px #4D7F9D;
   background-color: #2D4E66;
 }
-.task-list .task-item .delete-task-btn {
+.dark-theme .task-list .task-item .delete-task-btn {
   color: #E8EDEE;
 }
-.task-list .task-item .edit-task-btn {
+.dark-theme .task-list .task-item .edit-task-btn {
   color: #E8EDEE;
 }
-.task-list .todo {
+.dark-theme .task-list .todo {
   background-color: #66312d;
   color: #E8EDEE;
   border: 3px solid #e7a29d;
 }
-.task-list .doing {
+.dark-theme .task-list .doing {
   background-color: #2d5066;
   color: #E8EDEE;
   border: 3px solid #9fc6de;
 }
-.task-list .done {
+.dark-theme .task-list .done {
   background-color: #2d6639;
   color: #E8EDEE;
   border: 3px solid #9fe0ad;
 }
-.task-list .research {
+.dark-theme .task-list .research {
   background-color: #4b2d66;
   color: #E8EDEE;
   border: 3px solid #d2b1ef;
