@@ -88,6 +88,7 @@ $beau: 'beauregular';
 
 body {
   background-color: $darkblue;
+  position:relative;
 
 header {
   display: flex;
@@ -281,7 +282,32 @@ header {
       font-variant: small-caps;
       line-height:1.8rem;
     }
-  }
+    position: relative; /* Ajout de position relative pour positionner le bouton */
+}
+
+.edit-task-btn {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background-color: transparent; /* Couleur rouge pour le bouton de corbeille */
+  color: $charcoal;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  // border-radius: 50%; /* Forme circulaire */
+}
+
+.delete-task-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: transparent; /* Couleur rouge pour le bouton de corbeille */
+  color: $charcoal;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  // border-radius: 50%; /* Forme circulaire */
+}
 
   .todo {
     background-color:$todotask;
@@ -307,6 +333,34 @@ header {
     border:3px solid $researchcolumn;
   }
 }
+
+//Responsive
+@media screen and (min-width: 768px) {
+  div.task-form{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 800px;
+    max-height: 150px;
+  }
+  #add-task-btn{ 
+    max-width: 114.17px;
+    max-height: 26px;
+  }
+  
+  div#task-list.task-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+  
+    .task-item {
+      width:30%;
+    }
+  }
+  }
 }
 
 //Light mode
@@ -428,6 +482,14 @@ header {
   .task-item {
     border: solid 3px $midblue;
     background-color: $darkblue;
+
+    .delete-task-btn {
+      color:$grey;
+    }
+
+    .edit-task-btn {
+      color:$grey;
+    }
   }
 
   .todo {
@@ -453,8 +515,8 @@ header {
     color:$grey;
     border:3px solid $researchtask;
   }
+
 }
-<<<<<<< HEAD
 
 footer{
   display:flex ;
@@ -478,38 +540,6 @@ footer{
   margin-top: auto;
   width: 100%;
   justify-content: space-between;
-}
-=======
-}
-
-
->>>>>>> bb4ec0990b9d48f722987834d24ba3ace34a65a5
-//Responsive
-@media screen and (min-width: 768px) {
-div.task-form{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  max-width: 800px;
-  max-height: 150px;
-}
-#add-task-btn{ 
-  max-width: 114.17px;
-  max-height: 26px;
-}
-
-div#task-list.task-list{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-right: 10px;
-  margin-left: 10px;
-
-  .task-item {
-    width:30%;
-  }
-}
 }
 
 
@@ -563,10 +593,12 @@ div#task-list.task-list{
   position: absolute;
   top: 5px;
   right: 5px;
-  background-color: #ff6347; /* Couleur rouge pour le bouton de corbeille */
-  color: #fff;
+  background-color: transparent; /* Couleur rouge pour le bouton de corbeille */
+  color: $grey;
   border: none;
   padding: 5px 10px;
   cursor: pointer;
-  border-radius: 50%; /* Forme circulaire */
+  // border-radius: 50%; /* Forme circulaire */
+}
+
 }

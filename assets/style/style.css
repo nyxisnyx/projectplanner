@@ -59,6 +59,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 body {
   background-color: #2D4E66;
+  position: relative;
 }
 body header {
   display: flex;
@@ -222,6 +223,7 @@ body .task-list .task-item {
   border: solid 3px #4D7F9D;
   background-color: #9FBED2;
   padding: 5%;
+  position: relative; /* Ajout de position relative pour positionner le bouton */
 }
 body .task-list .task-item h3 {
   text-align: center;
@@ -230,6 +232,26 @@ body .task-list .task-item h3 {
   font-size: 1.5rem;
   font-variant: small-caps;
   line-height: 1.8rem;
+}
+body .task-list .edit-task-btn {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background-color: transparent; /* Couleur rouge pour le bouton de corbeille */
+  color: #292f34;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+body .task-list .delete-task-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: transparent; /* Couleur rouge pour le bouton de corbeille */
+  color: #292f34;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
 }
 body .task-list .todo {
   background-color: #e7a29d;
@@ -250,6 +272,30 @@ body .task-list .research {
   background-color: #d2b1ef;
   color: #292f34;
   border: 3px solid #4b2d66;
+}
+@media screen and (min-width: 768px) {
+  body div.task-form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 800px;
+    max-height: 150px;
+  }
+  body #add-task-btn {
+    max-width: 114.17px;
+    max-height: 26px;
+  }
+  body div#task-list.task-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  body div#task-list.task-list .task-item {
+    width: 30%;
+  }
 }
 
 .dark-theme {
@@ -349,6 +395,12 @@ body .task-list .research {
   border: solid 3px #4D7F9D;
   background-color: #2D4E66;
 }
+.dark-theme .task-list .task-item .delete-task-btn {
+  color: #E8EDEE;
+}
+.dark-theme .task-list .task-item .edit-task-btn {
+  color: #E8EDEE;
+}
 .dark-theme .task-list .todo {
   background-color: #66312d;
   color: #E8EDEE;
@@ -375,21 +427,18 @@ footer {
   flex-direction: row;
   justify-content: center;
 }
-
-.git {
+.dark-theme .git {
   max-width: 30px;
   max-height: 30px;
 }
-
-.contributors {
+.dark-theme .contributors {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 20px;
   margin-left: 5px;
 }
-
-.contacts {
+.dark-theme .contacts {
   margin-top: auto;
   width: 100%;
   justify-content: space-between;
@@ -420,46 +469,39 @@ footer {
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.5);
 }
-
-.modal {
+.dark-theme .modal {
   background-color: #fefefe;
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
 }
-
-.modal h2 {
+.dark-theme .modal h2 {
   margin-top: 0;
 }
-
-.modal input,
-.modal select {
+.dark-theme .modal input,
+.dark-theme .modal select {
   display: block;
   margin-bottom: 10px;
   width: 100%;
 }
-
-.modal button {
+.dark-theme .modal button {
   width: 100px;
   margin-top: 10px;
 }
-
-.task-item {
+.dark-theme .task-item {
   border: 1px solid #ccc;
   padding: 10px;
   margin-bottom: 10px;
   position: relative; /* Ajout de position relative pour positionner le bouton */
 }
-
-.delete-task-btn {
+.dark-theme .delete-task-btn {
   position: absolute;
   top: 5px;
   right: 5px;
-  background-color: #ff6347; /* Couleur rouge pour le bouton de corbeille */
-  color: #fff;
+  background-color: transparent; /* Couleur rouge pour le bouton de corbeille */
+  color: #E8EDEE;
   border: none;
   padding: 5px 10px;
   cursor: pointer;
-  border-radius: 50%; /* Forme circulaire */
 }/*# sourceMappingURL=style.css.map */
