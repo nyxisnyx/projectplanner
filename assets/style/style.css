@@ -376,41 +376,58 @@ header h1 {
 }
 
 footer {
-.dark-theme footer {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-.dark-theme .git {
+footer .copy {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.git {
   max-width: 30px;
   max-height: 30px;
 }
-.dark-theme .contributors {
+
+.contributors {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 20px;
-  margin-left: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 10px;
 }
-.dark-theme .contacts {
+
+.contacts {
   margin-top: auto;
   width: 100%;
   justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-family: "beauregular";
+}
+.contacts h2 {
+  display: flex;
+  justify-content: center;
+  font-family: "beauregular";
 }
 
 @media screen and (min-width: 768px) {
-  .dark-theme div.task-form {
+  div.task-form {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     max-width: 800px;
     max-height: 150px;
   }
-  .dark-theme #add-task-btn {
+  #add-task-btn {
     max-width: 114.17px;
     max-height: 26px;
   }
-  .dark-theme div#task-list.task-list {
+  div#task-list.task-list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -418,11 +435,11 @@ footer {
     margin-right: 10px;
     margin-left: 10px;
   }
-  .dark-theme div#task-list.task-list .task-item {
+  div#task-list.task-list .task-item {
     width: 30%;
   }
 }
-.dark-theme .modal-container {
+.modal-container {
   display: none;
   position: fixed;
   z-index: 1;
@@ -433,33 +450,39 @@ footer {
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.5);
 }
-.dark-theme .modal {
+
+.modal {
   background-color: #fefefe;
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
 }
-.dark-theme .modal h2 {
+
+.modal h2 {
   margin-top: 0;
 }
-.dark-theme .modal input,
-.dark-theme .modal select {
+
+.modal input,
+.modal select {
   display: block;
   margin-bottom: 10px;
   width: 100%;
 }
-.dark-theme .modal button {
+
+.modal button {
   width: 100px;
   margin-top: 10px;
 }
-.dark-theme .task-item {
+
+.task-item {
   border: 1px solid #ccc;
   padding: 10px;
   margin-bottom: 10px;
   position: relative; /* Ajout de position relative pour positionner le bouton */
 }
-.dark-theme .delete-task-btn {
+
+.delete-task-btn {
   position: absolute;
   top: 5px;
   right: 5px;

@@ -459,6 +459,11 @@ footer{
   display:flex ;
   flex-direction: row;
   justify-content: center;
+  .copy{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
 }
 
 .git{
@@ -470,13 +475,23 @@ footer{
   flex-direction: row;
   justify-content: space-between;
   gap: 20px;
-  margin-left: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 10px;
 }
 
 .contacts {
   margin-top: auto;
   width: 100%;
   justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-family: $beau;
+h2{
+  display: flex;
+  justify-content: center;
+  font-family: $beau;
+}
 }
 //Responsive
 @media screen and (min-width: 768px) {
@@ -565,4 +580,3 @@ div#task-list.task-list{
   border-radius: 50%; /* Forme circulaire */
 }
 
-}
