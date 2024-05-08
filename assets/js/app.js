@@ -9,15 +9,7 @@ darkModeToggle.addEventListener('click', toggleDarkMode);
 
 function init() {
 
-<<<<<<< HEAD
     
-=======
-document.addEventListener('DOMContentLoaded', () => {
-    loadTasks();
-});
-
-
->>>>>>> refs/remotes/origin/development
     document.getElementById("sort-alpha-btn").addEventListener("click", () => {
         renderSortedTasks('name');
     });

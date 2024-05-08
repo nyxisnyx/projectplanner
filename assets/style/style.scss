@@ -310,7 +310,7 @@ body {
   }
 }
 
-/* Dark mode styles */
+//Light mode
 .dark-theme {
   background-color: $lightblue ; 
   color: $charcoal; 
@@ -356,8 +356,7 @@ body {
     max-width: 114.17px;
     max-height: 26px;
   }
-
-<<<<<<< HEAD
+}
 /* style.css */
 
 .modal-container {
@@ -396,13 +395,3 @@ body {
   margin-top: 10px;
 }
 
-=======
-  div#task-list.task-list{
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    margin-right: 10px;
-    margin-left: 10px;
-  }
-}
->>>>>>> refs/remotes/origin/development
