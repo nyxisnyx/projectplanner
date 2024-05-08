@@ -388,8 +388,6 @@ body .task-list .research {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  position: absolute;
-  bottom: 1%;
 }
 .dark-theme .git {
   max-width: 30px;
