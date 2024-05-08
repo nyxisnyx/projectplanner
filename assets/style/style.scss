@@ -88,6 +88,7 @@ $beau: 'beauregular';
 
 body {
   background-color: $darkblue;
+  position:relative;
 
 header {
   display: flex;
@@ -281,7 +282,20 @@ header {
       font-variant: small-caps;
       line-height:1.8rem;
     }
-  }
+    position: relative; /* Ajout de position relative pour positionner le bouton */
+}
+
+.delete-task-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: transparent; /* Couleur rouge pour le bouton de corbeille */
+  color: $charcoal;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  // border-radius: 50%; /* Forme circulaire */
+}
 
   .todo {
     background-color:$todotask;
@@ -428,6 +442,10 @@ header {
   .task-item {
     border: solid 3px $midblue;
     background-color: $darkblue;
+
+    .delete-task-btn {
+      color:$grey;
+    }
   }
 
   .todo {
@@ -453,16 +471,20 @@ header {
     color:$grey;
     border:3px solid $researchtask;
   }
+
+  
 }
 
 footer{
   display:flex ;
   flex-direction: row;
   justify-content: center;
+  border-top: 2px solid black;
   .copy{
     display: flex;
     justify-content: center;
     margin-top: 10px;
+    margin-left: 20px;
   }
 }
 
@@ -487,6 +509,7 @@ footer{
   margin-left: 20px;
   margin-right: 20px;
   font-family: $beau;
+  color: white;
 h2{
   display: flex;
   justify-content: center;
@@ -572,11 +595,11 @@ div#task-list.task-list{
   position: absolute;
   top: 5px;
   right: 5px;
-  background-color: #ff6347; /* Couleur rouge pour le bouton de corbeille */
-  color: #fff;
+  background-color: transparent; /* Couleur rouge pour le bouton de corbeille */
+  color: $grey;
   border: none;
   padding: 5px 10px;
   cursor: pointer;
-  border-radius: 50%; /* Forme circulaire */
+  // border-radius: 50%; /* Forme circulaire */
 }
 

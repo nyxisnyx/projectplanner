@@ -59,6 +59,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 body {
   background-color: #2D4E66;
+  position: relative;
 }
 body header {
   display: flex;
@@ -222,6 +223,7 @@ body .task-list .task-item {
   border: solid 3px #4D7F9D;
   background-color: #9FBED2;
   padding: 5%;
+  position: relative; /* Ajout de position relative pour positionner le bouton */
 }
 body .task-list .task-item h3 {
   text-align: center;
@@ -230,6 +232,16 @@ body .task-list .task-item h3 {
   font-size: 1.5rem;
   font-variant: small-caps;
   line-height: 1.8rem;
+}
+body .task-list .delete-task-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: transparent; /* Couleur rouge pour le bouton de corbeille */
+  color: #292f34;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
 }
 body .task-list .todo {
   background-color: #e7a29d;
@@ -354,6 +366,9 @@ header h1 {
   border: solid 3px #4D7F9D;
   background-color: #2D4E66;
 }
+.task-list .task-item .delete-task-btn {
+  color: #E8EDEE;
+}
 .task-list .todo {
   background-color: #66312d;
   color: #E8EDEE;
@@ -379,11 +394,13 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  border-top: 2px solid black;
 }
 footer .copy {
   display: flex;
   justify-content: center;
   margin-top: 10px;
+  margin-left: 20px;
 }
 
 .git {
@@ -408,6 +425,7 @@ footer .copy {
   margin-left: 20px;
   margin-right: 20px;
   font-family: "beauregular";
+  color: white;
 }
 .contacts h2 {
   display: flex;
@@ -486,10 +504,9 @@ footer .copy {
   position: absolute;
   top: 5px;
   right: 5px;
-  background-color: #ff6347; /* Couleur rouge pour le bouton de corbeille */
-  color: #fff;
+  background-color: transparent; /* Couleur rouge pour le bouton de corbeille */
+  color: #E8EDEE;
   border: none;
   padding: 5px 10px;
   cursor: pointer;
-  border-radius: 50%; /* Forme circulaire */
 }/*# sourceMappingURL=style.css.map */
