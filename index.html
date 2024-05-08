@@ -45,6 +45,25 @@
         <div class="task-list" id="task-list">
             <!-- Liste des tâches -->
         </div>
+        <!-- index.html -->
+
+<div id="modal-container" class="modal-container">
+    <div class="modal">
+        <h2>Edit Task</h2>
+        <input type="text" id="edit-task-name" placeholder="Nom de la tâche">
+        <input type="text" id="edit-task-description" placeholder="Description de la tâche">
+        <input type="date" id="edit-due-date">
+        <select id="edit-status">
+            <option value="todo">todo</option>
+            <option value="doing">doing</option>
+            <option value="done">done</option>
+            <option value="research">research</option>
+        </select>
+        <button id="save-task-btn">Save</button>
+        <button id="close-modal-btn">Close</button>
+    </div>
+</div>
+
         
         
     </div>
