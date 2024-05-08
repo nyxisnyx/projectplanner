@@ -356,8 +356,7 @@ body {
     max-width: 114.17px;
     max-height: 26px;
   }
-
-<<<<<<< HEAD
+}
 /* style.css */
 
 .modal-container {
@@ -396,13 +395,21 @@ body {
   margin-top: 10px;
 }
 
-=======
-  div#task-list.task-list{
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    margin-right: 10px;
-    margin-left: 10px;
-  }
+.task-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  position: relative; /* Ajout de position relative pour positionner le bouton */
 }
->>>>>>> refs/remotes/origin/development
+
+.delete-task-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: #ff6347; /* Couleur rouge pour le bouton de corbeille */
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 50%; /* Forme circulaire */
+}
