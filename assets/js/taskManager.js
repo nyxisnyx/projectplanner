@@ -103,12 +103,9 @@ export function renderTask(task) {
     const taskList = document.getElementById("task-list");
     const taskItem = document.createElement("div");
     taskItem.classList.add("task-item");
-<<<<<<< HEAD
     taskItem.classList.add(task.status);
     
     taskItem.classList.add(`status-${task.status}`);
-=======
->>>>>>> bb4ec0990b9d48f722987834d24ba3ace34a65a5
 
     const dueDate = new Date(task.dueDate);
     const today = new Date();

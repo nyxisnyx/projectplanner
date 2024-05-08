@@ -313,7 +313,7 @@ header {
 .dark-theme {
 background-color: $lightblue ; 
 color: $charcoal; 
-
+}
 header {
   #dark-mode-toggle {
     img {
@@ -454,7 +454,6 @@ header {
     border:3px solid $researchtask;
   }
 }
-<<<<<<< HEAD
 
 footer{
   display:flex ;
@@ -479,11 +478,6 @@ footer{
   width: 100%;
   justify-content: space-between;
 }
-=======
-}
-
-
->>>>>>> bb4ec0990b9d48f722987834d24ba3ace34a65a5
 //Responsive
 @media screen and (min-width: 768px) {
 div.task-form{
