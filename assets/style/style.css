@@ -233,6 +233,16 @@ body .task-list .task-item h3 {
   font-variant: small-caps;
   line-height: 1.8rem;
 }
+body .task-list .edit-task-btn {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background-color: transparent; /* Couleur rouge pour le bouton de corbeille */
+  color: #292f34;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
 body .task-list .delete-task-btn {
   position: absolute;
   top: 5px;
@@ -262,6 +272,30 @@ body .task-list .research {
   background-color: #d2b1ef;
   color: #292f34;
   border: 3px solid #4b2d66;
+}
+@media screen and (min-width: 768px) {
+  body div.task-form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 800px;
+    max-height: 150px;
+  }
+  body #add-task-btn {
+    max-width: 114.17px;
+    max-height: 26px;
+  }
+  body div#task-list.task-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  body div#task-list.task-list .task-item {
+    width: 30%;
+  }
 }
 
 .dark-theme {
@@ -364,6 +398,9 @@ body .task-list .research {
 .dark-theme .task-list .task-item .delete-task-btn {
   color: #E8EDEE;
 }
+.dark-theme .task-list .task-item .edit-task-btn {
+  color: #E8EDEE;
+}
 .dark-theme .task-list .todo {
   background-color: #66312d;
   color: #E8EDEE;
@@ -404,30 +441,6 @@ body .task-list .research {
   margin-top: auto;
   width: 100%;
   justify-content: space-between;
-}
-@media screen and (min-width: 768px) {
-  .dark-theme div.task-form {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    max-width: 800px;
-    max-height: 150px;
-  }
-  .dark-theme #add-task-btn {
-    max-width: 114.17px;
-    max-height: 26px;
-  }
-  .dark-theme div#task-list.task-list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-right: 10px;
-    margin-left: 10px;
-  }
-  .dark-theme div#task-list.task-list .task-item {
-    width: 30%;
-  }
 }
 .dark-theme .modal-container {
   display: none;
