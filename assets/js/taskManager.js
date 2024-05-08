@@ -135,3 +135,7 @@ document.getElementById("show-all-tasks-btn").addEventListener("click", () => {
     renderTaskList(); // Appel de la fonction pour afficher toutes les tâches
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    loadTasks();
+    filterTasksByStatus("all"); // Applica il filtro "All" al caricamento della pagina
+});
