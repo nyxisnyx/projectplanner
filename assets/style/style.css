@@ -279,6 +279,48 @@ body .task-list .research {
 .dark-theme .task-form #task-name::placeholder {
   color: #2D4E66;
 }
+.dark-theme .task-form #task-description {
+  background-color: #9FBED2;
+  border: 2px solid #292f34;
+  color: #292f34;
+}
+.dark-theme .task-form #task-description::-moz-placeholder {
+  color: #2D4E66;
+}
+.dark-theme .task-form #task-description::placeholder {
+  color: #2D4E66;
+}
+.dark-theme .task-form input[type=date] {
+  background-color: #9FBED2;
+  border: 2px solid #292f34;
+  text-align: center;
+  color: #292f34;
+}
+.dark-theme .task-form input[type=date]::-webkit-datetime-edit-month-field {
+  color: #2D4E66;
+}
+.dark-theme .task-form input[type=date]::-webkit-datetime-edit-day-field {
+  color: #2D4E66;
+}
+.dark-theme .task-form input[type=date]::-webkit-datetime-edit-year-field {
+  color: #2D4E66;
+}
+.dark-theme .task-form input[type=date]::-webkit-datetime-edit-text {
+  color: #2D4E66;
+}
+.dark-theme .task-form input[type=date]::-webkit-calendar-picker-indicator {
+  color: #2D4E66;
+  filter: invert(26%) sepia(12%) saturate(1832%) hue-rotate(163deg) brightness(96%) contrast(89%);
+}
+.dark-theme .task-form #status {
+  background-color: #9FBED2;
+  border: 2px solid #292f34;
+  color: #292f34;
+}
+.dark-theme .task-form #add-task-btn {
+  background-color: #9FBED2;
+  color: #2D4E66;
+}
 
 @media screen and (min-width: 768px) {
   div.task-form {
@@ -293,7 +335,6 @@ body .task-list .research {
     max-height: 26px;
   }
 }
-/* style.css */
 .modal-container {
   display: none;
   position: fixed;
