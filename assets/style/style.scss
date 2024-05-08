@@ -456,7 +456,26 @@ body {
   }
 }
 
+footer{
+  display: flex;
+  flex-direction: row;
 
+.git-icons{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+}
+
+.git{
+  max-width: 30px;
+  max-height: 30px;
+}
+.contributors{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 //Responsive
 @media screen and (min-width: 768px) {
   div.task-form{
@@ -470,29 +489,8 @@ body {
     max-width: 114.17px;
     max-height: 26px;
   }
-<<<<<<< HEAD
 }
 /* style.css */
-=======
-
-  div#task-list.task-list{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-right: 10px;
-    margin-left: 10px;
-
-    .task-item {
-      width:30%;
-    }
-  }
-}
-
-
-
-// Edit window
->>>>>>> refs/remotes/origin/development
 
 .modal-container {
   display: none;
@@ -530,7 +528,6 @@ body {
   margin-top: 10px;
 }
 
-<<<<<<< HEAD
 .task-item {
   border: 1px solid #ccc;
   padding: 10px;
@@ -549,5 +546,3 @@ body {
   cursor: pointer;
   border-radius: 50%; /* Forme circulaire */
 }
-=======
->>>>>>> refs/remotes/origin/development

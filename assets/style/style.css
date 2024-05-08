@@ -373,6 +373,27 @@ body .task-list .research {
 }
 >>>>>>> refs/remotes/origin/development
 
+footer {
+  display: flex;
+  flex-direction: row;
+}
+footer .git-icons {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.git {
+  max-width: 30px;
+  max-height: 30px;
+}
+
+.contributors {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 @media screen and (min-width: 768px) {
   div.task-form {
     display: flex;
