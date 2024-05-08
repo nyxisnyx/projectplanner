@@ -279,8 +279,6 @@ body .task-list .research {
 .dark-theme .task-form #task-name::placeholder {
   color: #2D4E66;
 }
-<<<<<<< HEAD
-=======
 .dark-theme .task-form #task-description {
   background-color: #9FBED2;
   border: 2px solid #292f34;
@@ -371,28 +369,6 @@ body .task-list .research {
   color: #E8EDEE;
   border: 3px solid #d2b1ef;
 }
->>>>>>> refs/remotes/origin/development
-
-footer {
-  display: flex;
-  flex-direction: row;
-}
-footer .git-icons {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-}
-
-.git {
-  max-width: 30px;
-  max-height: 30px;
-}
-
-.contributors {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
 
 @media screen and (min-width: 768px) {
   div.task-form {
@@ -406,10 +382,6 @@ footer .git-icons {
     max-width: 114.17px;
     max-height: 26px;
   }
-<<<<<<< HEAD
-}
-/* style.css */
-=======
   div#task-list.task-list {
     display: flex;
     flex-direction: row;
@@ -422,7 +394,6 @@ footer .git-icons {
     width: 30%;
   }
 }
->>>>>>> refs/remotes/origin/development
 .modal-container {
   display: none;
   position: fixed;
@@ -457,4 +428,23 @@ footer .git-icons {
 .modal button {
   width: 100px;
   margin-top: 10px;
+}
+
+.task-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  position: relative; /* Ajout de position relative pour positionner le bouton */
+}
+
+.delete-task-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: #ff6347; /* Couleur rouge pour le bouton de corbeille */
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 50%; /* Forme circulaire */
 }/*# sourceMappingURL=style.css.map */
