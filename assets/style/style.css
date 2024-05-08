@@ -252,7 +252,6 @@ body .task-list .research {
   border: 3px solid #4b2d66;
 }
 
-/* Dark mode styles */
 .dark-theme {
   background-color: #9FBED2;
   color: #292f34;
@@ -280,6 +279,99 @@ body .task-list .research {
 .dark-theme .task-form #task-name::placeholder {
   color: #2D4E66;
 }
+<<<<<<< HEAD
+=======
+.dark-theme .task-form #task-description {
+  background-color: #9FBED2;
+  border: 2px solid #292f34;
+  color: #292f34;
+}
+.dark-theme .task-form #task-description::-moz-placeholder {
+  color: #2D4E66;
+}
+.dark-theme .task-form #task-description::placeholder {
+  color: #2D4E66;
+}
+.dark-theme .task-form input[type=date] {
+  background-color: #9FBED2;
+  border: 2px solid #292f34;
+  text-align: center;
+  color: #292f34;
+}
+.dark-theme .task-form input[type=date]::-webkit-datetime-edit-month-field {
+  color: #2D4E66;
+}
+.dark-theme .task-form input[type=date]::-webkit-datetime-edit-day-field {
+  color: #2D4E66;
+}
+.dark-theme .task-form input[type=date]::-webkit-datetime-edit-year-field {
+  color: #2D4E66;
+}
+.dark-theme .task-form input[type=date]::-webkit-datetime-edit-text {
+  color: #2D4E66;
+}
+.dark-theme .task-form input[type=date]::-webkit-calendar-picker-indicator {
+  color: #2D4E66;
+  filter: invert(26%) sepia(12%) saturate(1832%) hue-rotate(163deg) brightness(96%) contrast(89%);
+}
+.dark-theme .task-form #status {
+  background-color: #9FBED2;
+  border: 2px solid #292f34;
+  color: #292f34;
+}
+.dark-theme .task-form #add-task-btn {
+  background-color: #9FBED2;
+  color: #2D4E66;
+}
+.dark-theme #sort button {
+  background-color: #2D4E66;
+  color: #9FBED2;
+}
+.dark-theme #filters #filter-todo-btn {
+  background-color: #66312d;
+  color: #e7a29d;
+  border: 3px solid #e7a29d;
+}
+.dark-theme #filters #filter-doing-btn {
+  background-color: #2d5066;
+  color: #9fc6de;
+  border: 3px solid #9fc6de;
+}
+.dark-theme #filters #filter-done-btn {
+  background-color: #2d6639;
+  color: #9fe0ad;
+  border: 3px solid #9fe0ad;
+}
+.dark-theme #filters #filter-research-btn {
+  background-color: #4b2d66;
+  color: #d2b1ef;
+  border: 3px solid #d2b1ef;
+}
+.dark-theme .task-list .task-item {
+  border: solid 3px #4D7F9D;
+  background-color: #2D4E66;
+}
+.dark-theme .task-list .todo {
+  background-color: #66312d;
+  color: #E8EDEE;
+  border: 3px solid #e7a29d;
+}
+.dark-theme .task-list .doing {
+  background-color: #2d5066;
+  color: #E8EDEE;
+  border: 3px solid #9fc6de;
+}
+.dark-theme .task-list .done {
+  background-color: #2d6639;
+  color: #E8EDEE;
+  border: 3px solid #9fe0ad;
+}
+.dark-theme .task-list .research {
+  background-color: #4b2d66;
+  color: #E8EDEE;
+  border: 3px solid #d2b1ef;
+}
+>>>>>>> refs/remotes/origin/development
 
 @media screen and (min-width: 768px) {
   div.task-form {
@@ -293,8 +385,23 @@ body .task-list .research {
     max-width: 114.17px;
     max-height: 26px;
   }
+<<<<<<< HEAD
 }
 /* style.css */
+=======
+  div#task-list.task-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  div#task-list.task-list .task-item {
+    width: 30%;
+  }
+}
+>>>>>>> refs/remotes/origin/development
 .modal-container {
   display: none;
   position: fixed;
