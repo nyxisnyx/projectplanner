@@ -3,56 +3,56 @@
   1. Use a more-intuitive box-sizing model.
 */
 *, *::before, *::after {
-    box-sizing: border-box;
-  }
-  /*
-    2. Remove default margin
-  */
-  * {
-    margin: 0;
-  }
-  /*
-    Typographic tweaks!
-    3. Add accessible line-height
-    4. Improve text rendering
-  */
-  body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-  }
-  /*
-    5. Improve media defaults
-  */
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
-  /*
-    6. Remove built-in form typography styles
-  */
-  input, button, textarea, select {
-    font: inherit;
-  }
-  /*
-    7. Avoid text overflows
-  */
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-  }
-  /*
-    8. Create a root stacking context
-  */
-  #root, #__next {
-    isolation: isolate;
-  }
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
 
 //IMPORT FONT
 @font-face {
-    font-family: 'beauregular';
-    src: url('fonts/beauregular-0nlo-webfont.woff2') format('woff2'),
-         url('fonts/beauregular-0nlo-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'beauregular';
+  src: url('fonts/beauregular-0nlo-webfont.woff2') format('woff2'),
+       url('fonts/beauregular-0nlo-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 //VARIABLES
@@ -87,46 +87,182 @@ $beau: 'beauregular';
 //STYLE
 
 body {
-    background-color: $darkblue;
+  background-color: $darkblue;
 
-  header {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: baseline;
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
 
-      #dark-mode-toggle {
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-        padding: 0; 
-        margin-left: 2%;
-      }
-      
-      #dark-mode-toggle img {
-        width: 24px; 
-        height: auto; 
-        filter: invert(80%) sepia(21%) saturate(329%) hue-rotate(160deg) brightness(89%) contrast(90%);
-      }
-
-      h1 {
-        color:$grey;
-        text-align:center;
-        margin-top:2%;
-        margin-left:2%;
-        text-decoration: underline double 0.01rem $lightblue;
-        font-family: $beau;
-        font-weight: 100;
-        font-size: 2.5rem;
-        font-variant: small-caps;
-        line-height:2.8rem;
+    #dark-mode-toggle {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0; 
+      margin-left: 2%;
     }
-  }
     
-  .task-form {
+    #dark-mode-toggle img {
+      width: 24px; 
+      height: auto; 
+      filter: invert(80%) sepia(21%) saturate(329%) hue-rotate(160deg) brightness(89%) contrast(90%);
+    }
+
+    h1 {
+      color:$grey;
+      text-align:center;
+      margin-top:2%;
+      margin-left:2%;
+      text-decoration: underline double 0.01rem $lightblue;
+      font-family: $beau;
+      font-weight: 100;
+      font-size: 2.5rem;
+      font-variant: small-caps;
+      line-height:2.8rem;
+  }
+}
+  
+.task-form {
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: space-evenly;
+  width:80%;
+  height:35vh;
+  margin:5%;
+  margin-right:auto;
+  margin-left:auto;
+  border: solid 3px $midblue;
+  background-color: $lightblue;
+  padding:5%;
+
+  #task-name {
+    background-color: $darkblue;
+    border:2px solid $greyblue;
+    text-align:center;
+    color:$grey;
+  }
+
+  #task-name::placeholder {
+    color:$softyellow;
+  }
+
+  #task-description {
+    background-color: $darkblue;
+    border:2px solid $greyblue;
+    text-align:center;
+    color:$grey;
+  }
+
+  #task-description::placeholder {
+    color:$softyellow;
+  }
+
+  #due-date {
+    min-width: 126px;
+    min-height: 30px;
+  }
+
+  input[type="date"] {
+    background-color: $darkblue;
+    border:2px solid $greyblue;
+    text-align:center;
+    color:$grey;
+  }
+
+  input[type="date"]::-webkit-datetime-edit-month-field {
+    color:$softyellow;
+  }
+
+  input[type="date"]::-webkit-datetime-edit-day-field {
+    color:$softyellow;
+  }
+
+  input[type="date"]::-webkit-datetime-edit-year-field {
+    color:$softyellow;
+  }
+
+  input[type="date"]::-webkit-datetime-edit-text {
+    color:$softyellow;
+  }
+
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    color:$softyellow;
+    filter: invert(98%) sepia(5%) saturate(2076%) hue-rotate(335deg) brightness(85%) contrast(103%);
+  }
+
+  #status {
+    background-color: $darkblue;
+    border:2px solid $greyblue;
+    text-align:center;
+    color:$grey;
+  }
+
+  #add-task-btn {
+    background-color: $darkblue;
+    color:$lightblue;
+    border:none;
+  }
+
+  #add-task-btn:hover {
+    color:$grey !important;
+  }
+}
+
+#sort {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: center;
+  margin-bottom:2%;
+
+  button {
+    margin:1%;
+    background-color: $lightblue;
+    color:$charcoal;
+    border:none;
+  }
+}
+
+#filters {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: center;
+  margin-bottom:2%;
+
+  button {
+    margin:1%;
+  }
+
+  #filter-todo-btn {
+    background-color:$todotask;
+    color:$charcoal;
+    border:3px solid $todocolumn;
+  }
+
+  #filter-doing-btn {
+    background-color:$doingtask;
+    color:$charcoal;
+    border:3px solid $doingcolumn;
+  }
+
+  #filter-done-btn {
+    background-color:$donetask;
+    color:$charcoal;
+    border:3px solid $donecolumn;
+  }
+
+  #filter-research-btn {
+    background-color:$researchtask;
+    color:$charcoal;
+    border:3px solid $researchcolumn;
+  }
+}
+
+.task-list {
+  .task-item {
     display:flex;
     flex-direction:column;
-    align-items: center;
     justify-content: space-evenly;
     width:80%;
     height:35vh;
@@ -137,324 +273,188 @@ body {
     background-color: $lightblue;
     padding:5%;
 
-    #task-name {
-      background-color: $darkblue;
-      border:2px solid $greyblue;
+    h3 {
       text-align:center;
-      color:$grey;
-    }
-
-    #task-name::placeholder {
-      color:$softyellow;
-    }
-
-    #task-description {
-      background-color: $darkblue;
-      border:2px solid $greyblue;
-      text-align:center;
-      color:$grey;
-    }
-
-    #task-description::placeholder {
-      color:$softyellow;
-    }
-
-    #due-date {
-      min-width: 126px;
-      min-height: 30px;
-    }
-
-    input[type="date"] {
-      background-color: $darkblue;
-      border:2px solid $greyblue;
-      text-align:center;
-      color:$grey;
-    }
-
-    input[type="date"]::-webkit-datetime-edit-month-field {
-      color:$softyellow;
-    }
-
-    input[type="date"]::-webkit-datetime-edit-day-field {
-      color:$softyellow;
-    }
-
-    input[type="date"]::-webkit-datetime-edit-year-field {
-      color:$softyellow;
-    }
-
-    input[type="date"]::-webkit-datetime-edit-text {
-      color:$softyellow;
-    }
-
-    input[type="date"]::-webkit-calendar-picker-indicator {
-      color:$softyellow;
-      filter: invert(98%) sepia(5%) saturate(2076%) hue-rotate(335deg) brightness(85%) contrast(103%);
-    }
-
-    #status {
-      background-color: $darkblue;
-      border:2px solid $greyblue;
-      text-align:center;
-      color:$grey;
-    }
-
-    #add-task-btn {
-      background-color: $darkblue;
-      color:$lightblue;
-      border:none;
-    }
-
-    #add-task-btn:hover {
-      color:$grey !important;
+      font-family: $beau;
+      font-weight: 100;
+      font-size: 1.5rem;
+      font-variant: small-caps;
+      line-height:1.8rem;
     }
   }
 
-  #sort {
-    display:flex;
-    flex-wrap:wrap;
-    justify-content: center;
-    margin-bottom:2%;
-
-    button {
-      margin:1%;
-      background-color: $lightblue;
-      color:$charcoal;
-      border:none;
-    }
+  .todo {
+    background-color:$todotask;
+    color:$charcoal;
+    border:3px solid $todocolumn;
   }
 
-  #filters {
-    display:flex;
-    flex-wrap:wrap;
-    justify-content: center;
-    margin-bottom:2%;
-
-    button {
-      margin:1%;
-    }
-
-    #filter-todo-btn {
-      background-color:$todotask;
-      color:$charcoal;
-      border:3px solid $todocolumn;
-    }
-
-    #filter-doing-btn {
-      background-color:$doingtask;
-      color:$charcoal;
-      border:3px solid $doingcolumn;
-    }
-
-    #filter-done-btn {
-      background-color:$donetask;
-      color:$charcoal;
-      border:3px solid $donecolumn;
-    }
-
-    #filter-research-btn {
-      background-color:$researchtask;
-      color:$charcoal;
-      border:3px solid $researchcolumn;
-    }
+  .doing {
+    background-color:$doingtask;
+    color:$charcoal;
+    border:3px solid $doingcolumn;
   }
 
-  .task-list {
-    .task-item {
-      display:flex;
-      flex-direction:column;
-      justify-content: space-evenly;
-      width:80%;
-      height:35vh;
-      margin:5%;
-      margin-right:auto;
-      margin-left:auto;
-      border: solid 3px $midblue;
-      background-color: $lightblue;
-      padding:5%;
-
-      h3 {
-        text-align:center;
-        font-family: $beau;
-        font-weight: 100;
-        font-size: 1.5rem;
-        font-variant: small-caps;
-        line-height:1.8rem;
-      }
-    }
-
-    .todo {
-      background-color:$todotask;
-      color:$charcoal;
-      border:3px solid $todocolumn;
-    }
-
-    .doing {
-      background-color:$doingtask;
-      color:$charcoal;
-      border:3px solid $doingcolumn;
-    }
-
-    .done {
-      background-color:$donetask;
-      color:$charcoal;
-      border:3px solid $donecolumn;
-    }
-
-    .research {
-      background-color:$researchtask;
-      color:$charcoal;
-      border:3px solid $researchcolumn;
-    }
+  .done {
+    background-color:$donetask;
+    color:$charcoal;
+    border:3px solid $donecolumn;
   }
+
+  .research {
+    background-color:$researchtask;
+    color:$charcoal;
+    border:3px solid $researchcolumn;
+  }
+}
 }
 
 //Light mode
 .dark-theme {
-  background-color: $lightblue ; 
-  color: $charcoal; 
-  
-  header {
-    #dark-mode-toggle {
-      img {
-        filter: invert(23%) sepia(8%) saturate(3452%) hue-rotate(163deg) brightness(97%) contrast(79%);
-      }
-    }
+background-color: $lightblue ; 
+color: $charcoal; 
 
-    h1 {
-      color:$darkblue;
-      text-decoration: underline double 0.01rem $midblue;
+header {
+  #dark-mode-toggle {
+    img {
+      filter: invert(23%) sepia(8%) saturate(3452%) hue-rotate(163deg) brightness(97%) contrast(79%);
     }
   }
 
-  .task-form {
-    border: solid 3px $midblue;
-    background-color: $darkblue;
-
-    #task-name {
-      background-color: $lightblue;
-      border:2px solid $charcoal;
-      color: $charcoal;
-    }
-
-    #task-name::placeholder {
-      color:$darkblue;
-    }
-
-    #task-description {
-      background-color: $lightblue;
-      border:2px solid $charcoal;
-      color:$charcoal;
-    }
-
-    #task-description::placeholder {
-      color:$darkblue;
-    }
-
-    input[type="date"] {
-      background-color: $lightblue;
-      border:2px solid $charcoal;
-      text-align:center;
-      color:$charcoal;
-    }
-
-    input[type="date"]::-webkit-datetime-edit-month-field {
-      color:$darkblue;
-    }
-
-    input[type="date"]::-webkit-datetime-edit-day-field {
-      color:$darkblue;
-    }
-
-    input[type="date"]::-webkit-datetime-edit-year-field {
-      color:$darkblue;
-    }
-
-    input[type="date"]::-webkit-datetime-edit-text {
-      color:$darkblue;
-    }
-
-    input[type="date"]::-webkit-calendar-picker-indicator {
-      color:$darkblue;
-      filter: invert(26%) sepia(12%) saturate(1832%) hue-rotate(163deg) brightness(96%) contrast(89%);
-    }
-
-    #status {
-      background-color: $lightblue;
-      border:2px solid $charcoal;
-      color:$charcoal;
-    }
-
-    #add-task-btn {
-      background-color: $lightblue;
-      color:$darkblue;
-    }
-  }
-
-  #sort {
-    button {
-      background-color: $darkblue;
-      color:$lightblue;
-    }
-  }
-
-  #filters {
-    #filter-todo-btn {
-      background-color:$todocolumn;
-      color:$todotask;
-      border:3px solid $todotask;
-    }
-
-    #filter-doing-btn {
-      background-color:$doingcolumn;
-      color:$doingtask;
-      border:3px solid $doingtask;
-    }
-
-    #filter-done-btn {
-      background-color:$donecolumn;
-      color:$donetask;
-      border:3px solid $donetask;
-    }
-
-    #filter-research-btn {
-      background-color:$researchcolumn;
-      color:$researchtask;
-      border:3px solid $researchtask;
-    }
-  }
-
-  .task-list {
-    .task-item {
-      border: solid 3px $midblue;
-      background-color: $darkblue;
-    }
-
-    .todo {
-      background-color:$todocolumn;
-      color:$grey;
-      border:3px solid $todotask;
-    }
-
-    .doing {
-      background-color:$doingcolumn;
-      color:$grey;
-      border:3px solid $doingtask;
-    }
-
-    .done {
-      background-color:$donecolumn;
-      color:$grey;
-      border:3px solid $donetask;
-    }
-
-    .research {
-      background-color:$researchcolumn;
-      color:$grey;
-      border:3px solid $researchtask;
-    }
+  h1 {
+    color:$darkblue;
+    text-decoration: underline double 0.01rem $midblue;
   }
 }
+
+.task-form {
+  border: solid 3px $midblue;
+  background-color: $darkblue;
+
+  #task-name {
+    background-color: $lightblue;
+    border:2px solid $charcoal;
+    color: $charcoal;
+  }
+
+  #task-name::placeholder {
+    color:$darkblue;
+  }
+
+  #task-description {
+    background-color: $lightblue;
+    border:2px solid $charcoal;
+    color:$charcoal;
+  }
+
+  #task-description::placeholder {
+    color:$darkblue;
+  }
+
+  input[type="date"] {
+    background-color: $lightblue;
+    border:2px solid $charcoal;
+    text-align:center;
+    color:$charcoal;
+  }
+
+  input[type="date"]::-webkit-datetime-edit-month-field {
+    color:$darkblue;
+  }
+
+  input[type="date"]::-webkit-datetime-edit-day-field {
+    color:$darkblue;
+  }
+
+  input[type="date"]::-webkit-datetime-edit-year-field {
+    color:$darkblue;
+  }
+
+  input[type="date"]::-webkit-datetime-edit-text {
+    color:$darkblue;
+  }
+
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    color:$darkblue;
+    filter: invert(26%) sepia(12%) saturate(1832%) hue-rotate(163deg) brightness(96%) contrast(89%);
+  }
+
+  #status {
+    background-color: $lightblue;
+    border:2px solid $charcoal;
+    color:$charcoal;
+  }
+
+  #add-task-btn {
+    background-color: $lightblue;
+    color:$darkblue;
+  }
+}
+
+#sort {
+  button {
+    background-color: $darkblue;
+    color:$lightblue;
+  }
+}
+
+#filters {
+  #filter-todo-btn {
+    background-color:$todocolumn;
+    color:$todotask;
+    border:3px solid $todotask;
+  }
+
+  #filter-doing-btn {
+    background-color:$doingcolumn;
+    color:$doingtask;
+    border:3px solid $doingtask;
+  }
+
+  #filter-done-btn {
+    background-color:$donecolumn;
+    color:$donetask;
+    border:3px solid $donetask;
+  }
+
+  #filter-research-btn {
+    background-color:$researchcolumn;
+    color:$researchtask;
+    border:3px solid $researchtask;
+  }
+}
+
+.task-list {
+  .task-item {
+    border: solid 3px $midblue;
+    background-color: $darkblue;
+  }
+
+  .todo {
+    background-color:$todocolumn;
+    color:$grey;
+    border:3px solid $todotask;
+  }
+
+  .doing {
+    background-color:$doingcolumn;
+    color:$grey;
+    border:3px solid $doingtask;
+  }
+
+  .done {
+    background-color:$donecolumn;
+    color:$grey;
+    border:3px solid $donetask;
+  }
+
+  .research {
+    background-color:$researchcolumn;
+    color:$grey;
+    border:3px solid $researchtask;
+  }
+}
+<<<<<<< HEAD
 
 footer{
   display:flex ;
@@ -479,37 +479,42 @@ footer{
   width: 100%;
   justify-content: space-between;
 }
+=======
+}
+
+
+>>>>>>> bb4ec0990b9d48f722987834d24ba3ace34a65a5
 //Responsive
 @media screen and (min-width: 768px) {
-  div.task-form{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    max-width: 800px;
-    max-height: 150px;
-  }
-  #add-task-btn{ 
-    max-width: 114.17px;
-    max-height: 26px;
-  }
+div.task-form{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 800px;
+  max-height: 150px;
+}
+#add-task-btn{ 
+  max-width: 114.17px;
+  max-height: 26px;
+}
 
-  div#task-list.task-list{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-right: 10px;
-    margin-left: 10px;
+div#task-list.task-list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
 
-    .task-item {
-      width:30%;
-    }
+  .task-item {
+    width:30%;
   }
+}
 }
 
 
 
-// Edit window
+//Edit window
 
 .modal-container {
   display: none;
@@ -547,3 +552,21 @@ footer{
   margin-top: 10px;
 }
 
+.task-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  position: relative; /* Ajout de position relative pour positionner le bouton */
+}
+
+.delete-task-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: #ff6347; /* Couleur rouge pour le bouton de corbeille */
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 50%; /* Forme circulaire */
+}

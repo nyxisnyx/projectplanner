@@ -95,5 +95,3 @@ function filterTasksByStatus(status) {
         renderTask(task);
     });
 }
-
-

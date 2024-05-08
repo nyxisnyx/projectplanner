@@ -1,6 +1,27 @@
 // taskManager.js
 
 // Ajouter un écouteur d'événements pour les boutons de modification
+
+document.getElementById("task-list").addEventListener("click", (event) => {
+    const taskItem = event.target.closest('.task-item');
+    if (taskItem && event.target.classList.contains('delete-task-btn')) {
+        // Récupérer le nom de la tâche à supprimer
+        const taskName = taskItem.querySelector('h3').textContent;
+        
+        // Supprimer la tâche
+        deleteTask(taskName);
+
+        // Mettre à jour l'affichage
+        renderTaskList();
+    }
+});
+
+function deleteTask(taskName) {
+    let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    tasks = tasks.filter(task => task.name !== taskName);
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+}
+
 document.getElementById("task-list").addEventListener("click", (event) => {
     const taskItem = event.target.closest('.task-item');
     if (taskItem && event.target.classList.contains('edit-task-btn')) {
@@ -82,9 +103,12 @@ export function renderTask(task) {
     const taskList = document.getElementById("task-list");
     const taskItem = document.createElement("div");
     taskItem.classList.add("task-item");
+<<<<<<< HEAD
     taskItem.classList.add(task.status);
     
     taskItem.classList.add(`status-${task.status}`);
+=======
+>>>>>>> bb4ec0990b9d48f722987834d24ba3ace34a65a5
 
     const dueDate = new Date(task.dueDate);
     const today = new Date();
@@ -97,7 +121,8 @@ export function renderTask(task) {
     <p class="task-due-date">Due Date: ${task.dueDate}</p>
     <p class="task-status">Status: ${task.status}</p>
     <p>Time Remaining: ${daysDifference} days</p>
-    <button class="edit-task-btn">Edit</button> 
+    <button class="edit-task-btn">Edit</button>
+    <button class="delete-task-btn">Corbeille</button>
     `;
     taskList.appendChild(taskItem);
 }
@@ -108,4 +133,8 @@ export function loadTasks() {
         renderTask(task);
     });
 }
+
+document.getElementById("show-all-tasks-btn").addEventListener("click", () => {
+    renderTaskList(); // Appel de la fonction pour afficher toutes les tâches
+});
 
