@@ -376,43 +376,41 @@ header h1 {
 }
 
 footer {
+.dark-theme footer {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-
-.git {
+.dark-theme .git {
   max-width: 30px;
   max-height: 30px;
 }
-
-.contributors {
+.dark-theme .contributors {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 20px;
   margin-left: 5px;
 }
-
-.contacts {
+.dark-theme .contacts {
   margin-top: auto;
   width: 100%;
   justify-content: space-between;
 }
 
 @media screen and (min-width: 768px) {
-  div.task-form {
+  .dark-theme div.task-form {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     max-width: 800px;
     max-height: 150px;
   }
-  #add-task-btn {
+  .dark-theme #add-task-btn {
     max-width: 114.17px;
     max-height: 26px;
   }
-  div#task-list.task-list {
+  .dark-theme div#task-list.task-list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -420,11 +418,11 @@ footer {
     margin-right: 10px;
     margin-left: 10px;
   }
-  div#task-list.task-list .task-item {
+  .dark-theme div#task-list.task-list .task-item {
     width: 30%;
   }
 }
-.modal-container {
+.dark-theme .modal-container {
   display: none;
   position: fixed;
   z-index: 1;
@@ -435,39 +433,33 @@ footer {
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.5);
 }
-
-.modal {
+.dark-theme .modal {
   background-color: #fefefe;
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
 }
-
-.modal h2 {
+.dark-theme .modal h2 {
   margin-top: 0;
 }
-
-.modal input,
-.modal select {
+.dark-theme .modal input,
+.dark-theme .modal select {
   display: block;
   margin-bottom: 10px;
   width: 100%;
 }
-
-.modal button {
+.dark-theme .modal button {
   width: 100px;
   margin-top: 10px;
 }
-
-.task-item {
+.dark-theme .task-item {
   border: 1px solid #ccc;
   padding: 10px;
   margin-bottom: 10px;
   position: relative; /* Ajout de position relative pour positionner le bouton */
 }
-
-.delete-task-btn {
+.dark-theme .delete-task-btn {
   position: absolute;
   top: 5px;
   right: 5px;
