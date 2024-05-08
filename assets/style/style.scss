@@ -466,10 +466,22 @@ body {
     max-width: 800px;
     max-height: 150px;
   }
-
   #add-task-btn{ 
     max-width: 114.17px;
     max-height: 26px;
+  }
+
+  div#task-list.task-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+
+    .task-item {
+      width:30%;
+    }
   }
 }
 

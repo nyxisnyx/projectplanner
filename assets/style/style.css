@@ -382,6 +382,17 @@ body .task-list .research {
     max-width: 114.17px;
     max-height: 26px;
   }
+  div#task-list.task-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  div#task-list.task-list .task-item {
+    width: 30%;
+  }
 }
 .modal-container {
   display: none;
