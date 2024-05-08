@@ -285,6 +285,18 @@ header {
     position: relative; /* Ajout de position relative pour positionner le bouton */
 }
 
+.edit-task-btn {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background-color: transparent; /* Couleur rouge pour le bouton de corbeille */
+  color: $charcoal;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  // border-radius: 50%; /* Forme circulaire */
+}
+
 .delete-task-btn {
   position: absolute;
   top: 5px;
@@ -321,6 +333,58 @@ header {
     border:3px solid $researchcolumn;
   }
 }
+
+//Responsive
+@media screen and (min-width: 768px) {
+  div.task-form{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 800px;
+    max-height: 150px;
+  }
+  #add-task-btn{ 
+    max-width: 114.17px;
+    max-height: 26px;
+  }
+  
+  div#task-list.task-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+  
+    .task-item {
+      width:30%;
+    }
+  }
+  }
+
+  footer{
+    display:flex ;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .git{
+    max-width: 30px;
+    max-height: 30px;
+  }
+  .contributors{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    margin-left: 5px;
+  }
+  
+  .contacts {
+    margin-top: auto;
+    width: 100%;
+    justify-content: space-between;
+  }
 }
 
 //Light mode
@@ -444,6 +508,10 @@ header {
     background-color: $darkblue;
 
     .delete-task-btn {
+      color:$grey;
+    }
+
+    .edit-task-btn {
       color:$grey;
     }
   }
